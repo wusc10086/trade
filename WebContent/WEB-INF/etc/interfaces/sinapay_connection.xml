@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="GB2312"?>
+<config>
+	<scripts>
+		<script name="Utils" describe="" claz="com.amarsoft.message.util.Utils"/>
+		<script name="Helper" describe="" claz="com.amarsoft.p2p.interfaces.utils.InterfaceHelper"/>
+		<script name="SinaPayUtils" describe="" claz="com.amarsoft.message.sinapay.utils.SinaPayUtils"/>
+		<script name="TUtils" describe="" claz="com.amarsoft.transcation.utils.TranscationUtils"/>
+	</scripts>
+	
+	<extendProperties>
+		<!-- 机构账户 -->
+		<property name="ORG_ACCOUNT_NO" value="hostingtest" />	
+		<property name="HB_WEBSIT_URL" value="http://127.0.0.1:8080/hbweb" />
+		<!-- 厚本营销账户处理 -->
+		<property name="MARKETING_ACCOUNT_NO" value="lium@houbank.com" />
+		<!-- 营销账户合作者身份ID -->
+		<property name="MARKETING_PARTNER_ID" value="XXXXXXXXXXXXXXXXXXXXX" />	
+	</extendProperties>
+	<connections>
+		<connection name="SINAPAY_CONNECTION" templetClass="com.amarsoft.message.sinapay.templet.SinaPayTemplet">
+			<extendProperties>
+					<property name="partner_id" value="200004135630" />	
+					<property name="input_charset" value="UTF-8" />
+					<property name="sign" value="1" />
+					<property name="sign_type" value="MD5" />
+					
+					<property name="url" value="https://testgate.pay.sina.com.cn/mgs/gateway.do" />
+					<!--  -->
+					<property name="md5encrypt" value="1234567890qwertyuiopasdfghjklzxc"></property>
+					<property name="channelId" value="3010"></property>
+					<property name="encrypt" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCBpueNweMbYdb+CMl8dUNv5g5THYLD9Z33cAMA4GNjmPYsbcNQLyO5QSlLNjpbCwopt7b5lFP8TGLUus4x0Ed6S4Wd9KmNw6NLbszNEmppP9HXlT9sT4/ShL0CpVF4ofFS8O/gXwCTJjYZJ0HvK3GBTSP2C9WlipTpWQ+9QJugewIDAQAB" />
+					
+			</extendProperties>
+		</connection>
+		
+		
+		<!-- 订单类交易-->
+		<connection name="SINAPAY_CONNECTION_BILL" templetClass="com.amarsoft.message.sinapay.templet.SinaPayTemplet">
+			<extendProperties>
+					<property name="partner_id" value="200004135630" />	
+					<property name="input_charset" value="UTF-8" />
+					<property name="sign" value="1" />
+					<property name="sign_type" value="MD5" />
+					
+					<property name="url" value="https://testgate.pay.sina.com.cn/mas/gateway.do" />
+					<!--  -->
+					<property name="channelId" value="3010"></property>
+					<property name="encrypt" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCBpueNweMbYdb+CMl8dUNv5g5THYLD9Z33cAMA4GNjmPYsbcNQLyO5QSlLNjpbCwopt7b5lFP8TGLUus4x0Ed6S4Wd9KmNw6NLbszNEmppP9HXlT9sT4/ShL0CpVF4ofFS8O/gXwCTJjYZJ0HvK3GBTSP2C9WlipTpWQ+9QJugewIDAQAB" />
+					<property name="md5encrypt" value="1234567890qwertyuiopasdfghjklzxc"></property>
+			</extendProperties>
+		</connection>
+			
+		<!-- 订单类交易-->
+		<connection name="SINAPAY_CONNECTION_GATEWAY" templetClass="com.amarsoft.message.sinapay.templet.SinaPayGatewayTemplet">
+			<extendProperties>
+					<property name="partner_id" value="200004135630" />	
+					<property name="input_charset" value="UTF-8" />
+					<property name="sign" value="1" />
+					<property name="sign_type" value="MD5" />
+					<property name="channelId" value="3020"></property>
+					<property name="url" value="https://testgate.pay.sina.com.cn/mas/gateway.do" />
+					<property name="notify_url" value="http://www.hao123.com" />
+					<property name="return_url" value="${CONNECTION.HB_WEBSIT_URL}/member/fund/recharge_processing.jsp" />
+					
+					<!--  -->
+					<property name="encrypt" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCBpueNweMbYdb+CMl8dUNv5g5THYLD9Z33cAMA4GNjmPYsbcNQLyO5QSlLNjpbCwopt7b5lFP8TGLUus4x0Ed6S4Wd9KmNw6NLbszNEmppP9HXlT9sT4/ShL0CpVF4ofFS8O/gXwCTJjYZJ0HvK3GBTSP2C9WlipTpWQ+9QJugewIDAQAB" />
+					<property name="md5encrypt" value="1234567890qwertyuiopasdfghjklzxc"></property>
+			</extendProperties>
+		</connection>
+		
+	</connections>
+</config>

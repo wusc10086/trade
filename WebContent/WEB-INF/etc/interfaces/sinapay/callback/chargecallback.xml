@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="GB2312"?>
+<config>
+	<!-- 
+	 -->
+	<messages>
+		<message id="新浪_充值回调" name="新浪_充值回调" connection="SINAPAY_CONNECTION_BILL">
+			<extendProperties>	
+				 <property name="statusField" value="deposit_status" />	
+				 <property name="successValue" value="SUCCESS" desc="交易成功代码"/>	
+				 <property name="errorMsgField" value="deposit_status" />				
+			</extendProperties>
+			 <request executeObject="新浪_充值回调_请求报文" 
+			 		  messageclass="com.amarsoft.message.common.message.JSONMessage" 
+					  fieldclass="com.amarsoft.message.common.message.JSONField"   
+			 ></request>
+			 <response 
+			 		executeObject="公共反馈报文"
+			 		messageclass="com.amarsoft.message.common.message.JSONMessage" 
+					fieldclass="com.amarsoft.message.common.message.JSONField" 
+			 		></response>
+		</message>	
+	</messages>
+	
+	<executeObjects>
+			<executeObject
+				name="新浪_充值回调_请求报文"
+				describe="新浪_充值回调_请求报文" 
+				elementName="sinapay"
+				mulRows="false">
+				 <extendProperties>
+				</extendProperties>
+				<field name="_input_charset" elementName="_input_charset" describe="_input_charset" type="String" size="20" valuesource="IN" value="_input_charset"/>
+				<field name="deposit_amount" elementName="deposit_amount" describe="deposit_amount" type="String" size="20" valuesource="IN" value="deposit_amount" required="true"/>
+				<field name="deposit_status" elementName="deposit_status" describe="deposit_status" type="String" size="20" valuesource="IN" value="deposit_status" required="true"/>
+				<field name="inner_trade_no" elementName="inner_trade_no" describe="inner_trade_no" type="String" size="20" valuesource="IN" value="inner_trade_no" required="true"/>
+				
+				<!-- 参数 -->
+				<field name="notify_id" elementName="notify_id" describe="notify_id" type="String" size="20" valuesource="IN" value="notify_id" required="true"/>
+				<field name="notify_time" elementName="notify_time" describe="notify_time" type="String" size="20" valuesource="IN" value="notify_time" required="true"/>
+				<field name="notify_type" elementName="notify_type" describe="notify_type" type="String" size="20" valuesource="IN" value="notify_type" required="true"/>
+				<field name="outer_trade_no" elementName="outer_trade_no" describe="outer_trade_no" type="String" size="20" valuesource="IN" value="outer_trade_no" required="true"/>
+				<field name="version" elementName="version" describe="version" type="String" size="20" valuesource="IN" value="outer_trade_no" required="true"/>
+				<field name="sign" elementName="sign" describe="sign" type="String" size="20" valuesource="IN" value="sign" required="true"/>
+				<field name="sign_type" elementName="sign_type" describe="sign_type" type="String" size="20" valuesource="IN" value="sign_type" required="true"/>
+				
+			</executeObject>
+				
+	</executeObjects>
+</config>

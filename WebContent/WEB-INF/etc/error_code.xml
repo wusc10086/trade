@@ -1,0 +1,1820 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Errors>
+    <error code="request.error">
+		<describe>请求参数异常</describe>
+		<solution>请联系服务商</solution>
+	</error>
+    
+	<error code="common.emptyuserid">
+		<describe>用户编号为空</describe>
+		<solution>请输入用户编号</solution>
+	</error>
+	
+	<error code="common.emptyusername">
+		<describe>用户名为空</describe>
+		<solution>请输入用户名</solution>
+	</error>
+	
+	<error code="common.emptypassword">
+		<describe>密码为空</describe>
+		<solution>请输入密码</solution>
+	</error>
+	
+	<error code="common.emptymobile">
+		<describe>手机号为空</describe>
+		<solution>请输入手机号</solution>
+	</error>
+	
+	<error code="common.emptyemail">
+		<describe>电子邮箱为空</describe>
+		<solution>请输入电子邮箱</solution>
+	</error>
+	
+	<error code="common.invalidemail">
+		<describe>电子邮箱格式不正确</describe>
+		<solution>请确认电子邮箱格式</solution>
+	</error>
+	
+	<error code="common.usernotexist">
+		<describe>用户不存在</describe>
+		<solution>请确认用户编号是否正确</solution>
+	</error>
+	
+	<error code="common.usernotauth">
+		<describe>用户未实名认证</describe>
+		<solution>请确认用户已实名认证</solution>
+	</error>
+	
+	<error code="common.usercenter.usernotexist">
+		<describe>用户中心未注册该用户</describe>
+		<solution>请确认用户编号是否正确</solution>
+	</error>
+	
+	<error code="common.usercenter.emptymainaccountflag">
+		<describe>主账号标识为空</describe>
+		<solution>请传入主账号标识</solution>
+	</error>
+	
+	<error code="common.usercenter.invalidmainaccountflag">
+		<describe>主账号标识不正确</describe>
+		<solution>主账号标识取值范围只能为{Y,N}</solution>
+	</error>
+	
+	<error code="common.trans.emptyserialno">
+		<describe>订单号为空</describe>
+		<solution>请输入订单号</solution>
+	</error>
+	
+	<error code="common.trans.transactionnotexists">
+		<describe>交易记录不存在</describe>
+		<solution>请确认订单号是否存在</solution>
+	</error>
+	
+	<error code="common.projectnotexist">
+		<describe>项目不存在</describe>
+		<solution>请确认您访问的项目有效并且在上架时间内</solution>
+	</error>
+	
+	<error code="common.contractnotexist">
+		<describe>合同不存在</describe>
+		<solution>请确认合同是否存在</solution>
+	</error>
+	
+	<error code="common.trans.alreadyrun">
+		<describe>交易已记账</describe>
+		<solution>请确认订单状态</solution>
+	</error>
+	
+	<error code="writeaccount.error">
+		<describe>p2p交易记账出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<error code="common.emptyorgid">
+		<describe>机构编号为空</describe>
+		<solution>请输入机构编号</solution>
+	</error>
+	
+	<error code="MobileChangeFlag.changed">
+	    <describe>手机已发生变更，请重新验证手机号</describe>
+	    <solution>请请重新验证手机号</solution>
+	</error>
+	
+	<error code="RetrievePasswordFlag.changed">
+	    <describe>您通过官网找回密码，请补充安全保护问题</describe>
+	    <solution>请补充安全保护问题</solution>
+	</error>
+	
+	<error code="request.invalid">
+		<describe>非法请求</describe>
+		<solution>请检查执行方法，请求格式，请求数据是否正确</solution>
+	</error>
+	<error code="response.unknown">
+		<describe>未知的返回错误</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	<error code="core.response.fail">
+		<describe>核心系统交易失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	<error code="logon.query.fail">
+		<describe>登录查询失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	<error code="logon.user.invalid">
+		<describe>登录校验失败</describe>
+		<solution>请确认账号和密码正确</solution>
+	</error>
+	<error code="logon.createKey.fail">
+		<describe>创建用户标志错误</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	<error code="account.session.timeout">
+		<describe>服务访问超时,请重新登录</describe>
+		<solution>请重新登录</solution>
+	</error>
+	<error code="account.session.invalid">
+		<describe>服务访问超时,请重新登录</describe>
+		<solution>请重新登录</solution>
+	</error>
+	<error code="system.auth.fail">
+		<describe>系统签名失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	<error code="system.auth.invalid">
+		<describe>无效的签名参数</describe>
+		<solution>请检查请求数据是否合法</solution>
+	</error>
+	<error code="request.decode.error">
+		<describe>接收数据解码错误</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	<error code="response.encode.error">
+		<describe>返回数据编码错误</describe>
+		<solution>请联系服务商</solution>
+	</error>
+
+	<error code="upload.file.invalid">
+		<describe>上传文件参数错误</describe>
+		<solution>请检查上传大小，格式</solution>
+	</error>
+
+	<error code="upload.file.missing">
+		<describe>无上传文件</describe>
+		<solution>请选择上传文件</solution>
+	</error>
+
+	<error code="upload.transport.invalid">
+		<describe>文件传输错误</describe>
+		<solution>请重新上传，如还不能成功请联系服务商</solution>
+	</error>
+	<error code="upload.save.error">
+		<describe>文件保存错误</describe>
+		<solution>请联系服务商</solution>
+	</error>
+
+	<error code="upload.common.error">
+		<describe>文件上传出现错误</describe>
+		<solution>请联系服务商</solution>
+	</error>
+
+	<error code="default.query.error">
+		<describe>查询出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+
+	<error code="default.database.error">
+		<describe>数据库操作出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+
+	<error code="business.deal.error">
+		<describe>服务器业务处理出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+
+	<error code="business.showhtml.fail">
+		<describe>服务器获取数据失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 新添加code值!!!!!!!!!!!!!!!!!!!!!! -->
+	
+	<!-- 用户id -->
+	<error code="userid.error">
+		<describe>请求用户ID出错</describe>
+		<solution>请输入用户ID</solution>
+	</error>
+	
+	<!-- 合同id -->
+	<error code="contractid.error">
+		<describe>请求合同ID出错</describe>
+		<solution>请输入合同ID</solution>
+	</error>
+	
+	<!-- 状态值 -->
+	<error code="status.error">
+		<describe>请求状态值出错</describe>
+		<solution>请输入状态值</solution>
+	</error>
+	
+	<!-- 请求参数：借据号出错-->
+	<error code="objectno.error">
+		<describe>借据号不能为空</describe>
+		<solution>请输入借据号</solution>
+	</error>
+	
+	<!-- 期次号-->
+	<error code="seqid.error">
+		<describe>请求期次号出错</describe>
+		<solution>请输入期次号</solution>
+	</error>
+	
+	<!-- 邮箱-->
+	<error code="email.error">
+		<describe>请求邮箱出错</describe>
+		<solution>请输入邮箱</solution>
+	</error>
+	
+	<!-- 手机-->
+	<error code="phoneno.error">
+		<describe>请求手机出错</describe>
+		<solution>请输入手机</solution>
+	</error>
+	
+	<!-- 留言类型-->
+	<error code="notetype.error">
+		<describe>请求留言类型出错</describe>
+		<solution>请输入留言类型</solution>
+	</error>
+	
+	<!-- 留言-->
+	<error code="notetext.error">
+		<describe>请求留言出错</describe>
+		<solution>请输入留言</solution>
+	</error>
+	
+	<!-- 姓名-->
+	<error code="realname.error">
+		<describe>请求姓名出错</describe>
+		<solution>请输入姓名</solution>
+	</error>
+	
+	<!-- 称谓-->
+	<error code="title.error">
+		<describe>请求称谓出错</describe>
+		<solution>请输入称谓</solution>
+	</error>
+ 
+	<!-- 投资明细查询 -->
+	<error code="queryinvestmentinfo.error">
+		<describe>用户投资明细查询出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 投资统计查询 -->
+	<error code="queryinvestmentstat.error">
+		<describe>用户投资统计查询出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 投资统计查询 -->
+	<error code="tusaamtnoenough.error">
+		<describe>投资人金额不足</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 借款信息查询 -->
+	<error code="queryloanlist.error">
+		<describe>用户借款信息查询出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 还款信息查询 -->
+	<error code="querypaymentinfo.error">
+		<describe>用户还款信息查询出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 收款明细查询 -->
+	<error code="querypaymentschedule.error">
+		<describe>用户收款明细查询出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	  <!-- 投资明细查询 -->
+	<error code="queryinvestmentlist.error">
+		<describe>用户投资列表出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+		
+		<!-- 用户借款期次查询 -->
+	<error code="queryloaninfoseqid.error">
+		<describe>用户借款期次查询 出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 用户借款统计查询 -->
+	<error code="queryloaninfosum.error">
+		<describe>用户借款统计查询 出错</describe>
+		<solution>请联系服务商</solution>
+	</error> 
+	
+	<!-- 确认合同 -->
+	<error code="confirmprecontract.error">
+		<describe>确认合同 出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 确认合同 -->
+	<error code="confirmprecontract.error">
+		<describe>确认合同 出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 生成预签合同 -->
+	<error code="generateprecontract.error">
+		<describe>生成预签合同出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 生成预签合同 -->
+	<error code="generateprecontract.alreadysign">
+		<describe>您存在一份未失效的预签合同</describe>
+		<solution>无需再签</solution>
+	</error>
+	
+	<!-- 留言提交-->
+	<error code="saveusernote.error">
+		<describe>插入留言提交出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+		<!-- 用户还款统计查询 -->
+	<error code="paymentschedulereceiveinfo.error">
+		<describe>用户还款统计查询 出错</describe>
+		<solution>请联系服务商</solution>
+	</error> 
+	
+	<!-- 用户还款待收列表查询 -->
+	<error code="paymentschedulereceivelist.error"> 
+		<describe>用户还款列表查询 出错</describe>
+		<solution>请联系服务商</solution>
+	</error> 
+	
+	<!-- 用户还款已收列表查询 -->
+	<error code="paymentscheduletreatlist.error"> 
+		<describe>用户还款已收列表查询 出错</describe>
+		<solution>请联系服务商</solution>
+	</error> 
+	
+	
+	<!-- 登录：系统错误 -->
+	<error code="logon.error">
+		<describe>登录失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 登录：用户名为空 -->
+	<error code="logon.emptyuser">
+		<describe>登录凭证不得为空</describe>
+		<solution>请输入用户名或手机号或认证邮箱</solution>
+	</error>
+	
+	<!-- 登录：密码为空 -->
+	<error code="logon.emptypassword">
+		<describe>密码不得为空</describe>
+		<solution>请输入密码</solution>
+	</error>
+	
+	<!-- 登录：来源系统代码不正确 -->
+	<error code="logon.invalidbelongsystem">
+		<describe>来源系统代码不正确</describe>
+		<solution>来源系统代码只能为0、1、2或空</solution>
+	</error>
+	
+	<!-- 注册：系统错误 -->
+	<error code="register.error">
+		<describe>注册失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 注册：用户名重复 -->
+	<error code="register.alreadyregistered">
+		<describe>用户被已注册</describe>
+		<solution>请检查用户名和手机号</solution>
+	</error>
+	
+	<!-- 注册：用户名为空 -->
+	<error code="register.emptyuser">
+		<describe>用户名不得为空</describe>
+		<solution>请输入用户名</solution>
+	</error>
+	
+	<!-- 注册：密码为空 -->
+	<error code="register.emptypassword">
+		<describe>密码不得为空</describe>
+		<solution>请输入密码</solution>
+	</error>
+	
+	<!-- 注册：手机号为空 -->
+	<error code="register.emptymobile">
+		<describe>手机号不得为空</describe>
+		<solution>请输入手机号</solution>
+	</error>
+	
+	<!-- 注册：手机号重复 -->
+	<error code="register.mobileduplicate">
+		<describe>手机号已被其他用户使用</describe>
+		<solution>请确认手机号是否正确</solution>
+	</error>
+	
+	<!-- 注册：用户中心注册失败 -->
+	<error code="register.fail">
+		<describe>用户中心注册失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 账号唯一性校验：验证类型错误 -->
+	<error code="accountvalid.invalidvalidtype">
+		<describe>错误的验证类型</describe>
+		<solution>验证类型取值范围为（N-用户名/M-手机号/E-邮箱/O-联合）</solution>
+	</error>
+	
+	<!-- 账号唯一性校验：验证内容为空 -->
+	<error code="accountvalid.emptyvalidcontent">
+		<describe>验证内容不得为空</describe>
+		<solution>请输入验证内容</solution>
+	</error>
+	
+	<!-- 账号唯一性校验：系统错误 -->
+	<error code="accountvalid.error">
+		<describe>校验失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 单点登录：系统错误 -->
+	<error code="singlesignon.error">
+		<describe>单点登录失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 单点登录：SessionID为空 -->
+	<error code="singlesignon.emptysessionid">
+		<describe>SessionID不得为空</describe>
+		<solution>请输入SessionID</solution>
+	</error>
+	
+	<!-- 单点登录：用户编号为空 -->
+	<error code="singlesignon.emptyuserid">
+		<describe>用户编号不得为空</describe>
+		<solution>请输入用户编号</solution>
+	</error>
+	
+	<!-- 销毁Session：系统错误 -->
+	<error code="clearsession.error">
+		<describe>销毁Session失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 销毁Session：SessionID为空 -->
+	<error code="clearsession.emptysessionid">
+		<describe>SessionID不得为空</describe>
+		<solution>请输入SessionID</solution>
+	</error>
+	
+	<!-- 销毁Session：用户编号为空 -->
+	<error code="clearsession.emptyuserid">
+		<describe>用户编号不得为空</describe>
+		<solution>请输入用户编号</solution>
+	</error>
+	
+	<!-- 修改用户信息：用户编号为空 -->
+	<error code="modifyuseraccount.emptyuserid">
+		<describe>用户编号不得为空</describe>
+		<solution>请输入用户编号</solution>
+	</error>
+	
+	<!-- 修改用户信息：修改字段名为空 -->
+	<error code="modifyuseraccount.emptyfieldname">
+		<describe>用户编号不得为空</describe>
+		<solution>请输入修改类型</solution>
+	</error>
+	
+	<!-- 修改用户信息：系统错误 -->
+	<error code="modifyuseraccount.error">
+		<describe>修改用户信息失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 修改用户信息：修改类型错误 -->
+	<error code="modifyuseraccount.invalidfieldname">
+		<describe>错误的修改类型</describe>
+		<solution>请输入正确的修改类型</solution>
+	</error>
+	
+	<!-- 修改用户信息：修改类型错误 -->
+	<error code="modifyuseraccount.invalidfieldtype">
+		<describe>错误的信息类型</describe>
+		<solution>请输入正确的信息类型</solution>
+	</error>
+	
+	<!-- 修改用户信息：用户不存在 -->
+	<error code="modifyuseraccount.usernotexist">
+		<describe>用户不存在</describe>
+		<solution>请确认用户编号是否正确</solution>
+	</error>
+	
+	<!-- 保存用户详细信息：用户编号为空 -->
+	<error code="saveuseracctdetail.emptyuserid">
+		<describe>用户编号不得为空</describe>
+		<solution>请输入用户编号</solution>
+	</error>
+	
+	<!-- 保存用户详细信息：错误的数字格式 -->
+	<error code="saveuseracctdetail.invalidnumber">
+		<describe>错误的数字格式 </describe>
+		<solution>请检查数字格式00000000.00</solution>
+	</error>
+	
+	<!-- 保存用户详细信息：用户不存在 -->
+	<error code="saveuseracctdetail.usernotexist">
+		<describe>用户不存在</describe>
+		<solution>请确认用户编号是否正确</solution>
+	</error>
+	
+	<!-- 保存用户详细信息：系统错误 -->
+	<error code="saveuseracctdetail.error">
+		<describe>修改用户信息失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 查询用户信息：系统错误 -->
+	<error code="queryuseracctinfo.emptyuserid">
+		<describe>用户编号不得为空</describe>
+		<solution>请输入用户编号</solution>
+	</error>
+	
+	<!-- 查询用户信息：用户不存在 -->
+	<error code="queryuseracctinfo.usernotexist">
+		<describe>用户不存在</describe>
+		<solution>请确认用户编号是否正确</solution>
+	</error>
+	
+	<!-- 查询用户信息：系统错误 -->
+	<error code="queryuseracctinfo.error">
+		<describe>用户信息不正确</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	
+	<!-- 新增code开始 -->
+	
+	<!-- 请求参数：用户id不能为空 -->
+	<error code="userid.error">
+		<describe>用户ID不能为空</describe>
+		<solution>请输入用户ID</solution>
+	</error>
+	
+	<!-- 余额查询:查无数据 -->
+	<error code="queryaccountbalance.nodata.error">
+		<describe>未查到相关数据</describe>
+		<solution>请输入正确参数</solution>
+	</error>
+	
+	<!-- 余额查询:冻结金额不足 -->
+	<error code="frozenbalancenoenough.error">
+		<describe>冻结金额不足</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 余额查询:系统错误 -->
+	<error code="queryaccountbalance.error">
+		<describe>系统错误：查询出错</describe>
+		<solution>请联系服务商或稍后再试</solution>
+	</error>
+		
+	<!-- 交易明细查询:系统错误 -->
+	<error code="queryusertranslist.error">
+		<describe>交易明细查询出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+		
+	<!-- 查询绑定银行卡:系统错误 -->
+	<error code="querybindingbankcard.error">
+		<describe>系统错误：查询绑定银行卡信息出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 查询账号信息（ti_account_info）:系统错误-->
+	<error code="queryaccountinfo.error">
+		<describe>查询账号信息出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 查询账号信息（ti_account_info）:查无数据 -->
+	<error code="queryaccountinfo.nodata.error">
+		<describe>账户异常：账户信息为空</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 查询账户信息（ti_user_account）:系统错误-->
+	<error code="queryuseraccount.error">
+		<describe>系统异常：查询账户信息出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 查询账户信息（ti_user_account）:查无数据 -->
+	<error code="queryuseraccount.nodata.error">
+		<describe>未查到相关数据</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 请求参数：账户号出错 -->
+	<error code="accountno.error">
+		<describe>账户号不能为空</describe>
+		<solution>请输入账户号</solution>
+	</error>
+	
+	<!-- 请求参数：账户名出错 -->
+	<error code="accountname.error">
+		<describe>账户名不能为空</describe>
+		<solution>请输入账户名</solution>
+	</error>
+	
+	<!-- 账户冻结 -->
+	<error code="accountname.error">
+		<describe>账户被冻结,请解冻后使用</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 请求参数：开户行出错 -->
+	<error code="accountbelong.error">
+		<describe>开户行不能为空</describe>
+		<solution>请输入开户行</solution>
+	</error>
+	
+	<!-- 请求参数：开户地区出错 -->
+	<error code="belongarea.error">
+		<describe>开户地区不能为空</describe>
+		<solution>请输入开户地区</solution>
+	</error>
+	
+	<!-- 请求参数：充值金额出错 -->
+	<error code="chargeapply.amount.error">
+		<describe>充值金额不能为空</describe>
+		<solution>请输入充值金额</solution>
+	</error>
+	
+	<!-- 保存交易记录:系统错误 -->
+	<error code="savetransrecord.error">
+		<describe>系统异常：保存交易记录出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 保存交易日志:系统错误 -->
+	<error code="inserttranslog.error">
+		<describe>保存交易日志出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 请求参数：流水号出错-->
+	<error code="serialno.error">
+		<describe>流水号不能为空</describe>
+		<solution>请输入流水号</solution>
+	</error>
+	
+	<!-- 请求参数：流水号出错-->
+	<error code="otpmessage.serialno.error">
+		<describe>未发送验证码</describe>
+		<solution>请点击发送验证码</solution>
+	</error>
+	
+	<!--账户余额查询：查无数据 -->
+	<error code="quaryaccountamount.nodata.error">
+		<describe>获取用户账户余额出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!--账户余额查询：系统错误 -->
+	<error code="quaryaccountamount.error">
+		<describe>获取用户账户余额出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 手机号码查询：查无数据-->
+	<error code="quaryphonetel.nodata.error">
+		<describe>查询手机号码出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 手机号码查询：系统错误-->
+	<error code="quaryphonetel.error">
+		<describe>查询手机号码出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 发起充值申请：系统错误 -->
+	<error code="chargeapply.error">
+		<describe>系统错误:充值申请出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+
+	<!-- 提现金额超出用户设置金额 -->
+	<error code="withdraw.limitamount.error">
+		<describe>提现金额超出用户设置金额</describe>
+		<solution>请输入正确的金额</solution>
+	</error>
+	
+	<!-- 实时充值：系统错误 -->
+	<error code="runcharge.error">
+		<describe>实时充值失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 实时充值：充值结果为空 -->
+	<error code="runcharge.emptyresult">
+		<describe>充值结果为空</describe>
+		<solution>请输入充值结果</solution>
+	</error>
+	
+	<!-- 实时充值：充值日志编号为空 -->
+	<error code="runcharge.emptylogid">
+		<describe>充值日志编号为空</describe>
+		<solution>请输入充值日志编号</solution>
+	</error>
+	
+	<!-- 实时充值：实际支付金额错误 -->
+	<error code="runcharge.invaidamount">
+		<describe>实际支付金额错误</describe>
+		<solution>请确认实际支付金额</solution>
+	</error>
+	
+	<!-- 充值历史记录查询：系统错误 -->
+	<error code="querychargehistory.error">
+		<describe>系统错误：充值历史记录查询出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 发送短信提醒:系统错误 -->
+	<error code="smsreminder.error">
+		<describe>发送短信提醒出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 请求参数：提现金额出错 -->
+	<error code="withdraw.amount.error">
+		<describe>提现金额不能为空</describe>
+		<solution>请输入充值金额</solution>
+	</error>
+	
+	<!-- 可用余额查询：查无数据 -->
+	<error code="getuseablebalance.nodata.error">
+		<describe>未查到相关数据</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 可用余额查询：系统错误 -->
+	<error code="getuseablebalance.error">
+		<describe>获取账户可用余额出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 校验：账户可用余额不足 -->
+	<error code="usablebalance.notenough">
+		<describe>提现金额超出账户可用余额</describe>
+		<solution>请输入正确的提现金额</solution>
+	</error>
+	
+	<!-- 校验：冻结金额不足 -->
+	<error code="frozenbalance.notenough">
+		<describe>解冻金额超出账户冻结余额</describe>
+		<solution>请确认账户金额</solution>
+	</error>
+	
+	<!--当日提现交易次数：系统错误 -->
+	<error code="getwithdrawcount.error">
+		<describe>当日提现交易次数出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!--历史成功充值交易次数：系统错误 -->
+	<error code="getchargecount.error">
+		<describe>当日成功充值交易次数出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 校验：当日的提现交易次数已超过限额 -->
+	<error code="withdraw.limitcount.error">
+		<describe>本日的提现交易次数已超过限额</describe>
+		<solution>请稍后再试</solution>
+	</error>
+	
+	<!--当日充值总金额查询：系统错误 -->
+	<error code="getchargeallamount.error">
+		<describe>系统错误：查询当日充值总金额出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 校验：充值金额超出银行限制金额 -->
+	<error code="charge.limitamount.error">
+		<describe>充值金额超出银行限制金额</describe>
+		<solution>请稍后再试</solution>
+	</error>
+	
+	<!-- 校验： -->
+	<error code="out.bankchargetime.error">
+		<describe>银行系统日切中，无法充值</describe>
+		<solution>请0:05分后再试</solution>
+	</error>
+	
+	<!-- 校验：当日充值总金额超出银行限制金额 -->
+	<error code="charge.limitallamount.error">
+		<describe>当日充值总金额超出银行限制金额</describe>
+		<solution>请稍后再试</solution>
+	</error>
+	
+	<!--用户提现设置限额查询：查无数据 -->
+	<error code="getlimitcount.nodata.error">
+		<describe>未查到相关数据</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!--用户提现设置限额查询：系统错误 -->
+	<error code="getlimitcount.error">
+		<describe>用户提现设置限额查询出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 校验：提现金额超出用户设置提现金额 -->
+	<error code="withdraw.limitcount.error">
+		<describe>提现金额超出用户设置提现金额</describe>
+		<solution>请输入正确的金额或重新设置提现金额</solution>
+	</error>
+	
+	<!--冻结提现金额：系统错误 -->
+	<error code="makeamountfrozen.error">
+		<describe>冻结提现金额出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!--冻结提现金额：系统错误 -->
+	<error code="useraccount.abnormal.error">
+		<describe>账户异常，提现申请失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 发起提现申请:系统错误 -->
+	<error code="withdraw.error">
+		<describe>发起提现申请出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 发起提现申请:找到多个有效账户 -->
+	<error code="withdraw.multipleaccount">
+		<describe>找到多个有效账户</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 提现记录查询：系统错误 -->
+	<error code="withdrawhistory.error">
+		<describe>提现历史记录查询出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 银行提现限额查询：系统错误 -->
+	<error code="bankwithdrawlimit.error">
+		<describe>系统错误：银行提现限额查询出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 手续费计算查询：系统错误 -->
+	<error code="calctransfee.error">
+		<describe>系统错误：手续费计算出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 请求参数：短信类型错误 -->
+	<error code="sms.templetid.error">
+		<describe>校验：短信类型不能为空</describe>
+		<solution>请输入短信类型</solution>
+	</error>
+	
+	<!-- 发送手机动态验证码：系统错误-->
+	<error code="sendotpmessage.error">
+		<describe>系统错误：发送手机动态验证码错误</describe>
+		<solution>请重新发送</solution>
+	</error>
+	
+	<!-- 发送手机动态验证码：系统错误-->
+	<error code="sendotp.limit.error">
+		<describe>提示：两分钟内不能重复发送同类验证码</describe>
+		<solution>请稍后再试</solution>
+	</error>
+	
+	<!-- 发送手机动态验证码：发送失败-->
+	<error code="sendotpmessage.fail">
+		<describe>发送手机动态验证码失败</describe>
+		<solution>请重新发送</solution>
+	</error>
+	
+	<!-- 请求参数：验证码错误-->
+	<error code="otpcode.error">
+		<describe>验证码不能为空</describe>
+		<solution>请输入验证码</solution>
+	</error>
+	
+	<!-- 校验：验证码超时-->
+	<error code="otpcode.timeout.error">
+		<describe>验证码超时</describe>
+		<solution>请重新获取验证码</solution>
+	</error>
+	
+	<!-- 校验：验证码错误-->
+	<error code="otpcode.check.error">
+		<describe>验证码错误</describe>
+		<solution>请输入正确的验证码</solution>
+	</error>
+	
+	<!-- 验证手机动态码：系统错误-->
+	<error code="checkotpmessage.error">
+		<describe>系统错误：验证手机动态码错误</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 验证手机动态码：该验证码已失效-->
+	<error code="otpmessage.effective.error">
+		<describe>该验证码已失效</describe>
+		<solution>请重新获取验证码</solution>
+	</error>
+	
+	<!-- 请求参数：文档编号错误 -->
+	<error code="fileserialno.error">
+		<describe>校验：文档编号不能为空</describe>
+		<solution>请输入文档编号</solution>
+	</error>
+	
+	<!-- 下载代扣授权书：系统错误 -->
+	<error code="downloadfile.error">
+		<describe>系统错误：下载代扣授权书出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 请求参数：交易密码错误 -->
+	<error code="tranpassword.error">
+		<describe>校验：交易密码不能为空</describe>
+		<solution>请输入文档编号</solution>
+	</error>
+	
+	<!-- 获取当日交易密码连续错误次数和最近三个小时错误次数 -->
+	<error code="gettranspasserrorcount.error">
+		<describe>系统错误：获取交易密码错误次数出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 清除当日交易密码错误记录 -->
+	<error code="cleartranspasserrorcount.error">
+		<describe>系统错误：清除当日交易密码错误记录出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 交易密码查询：系统错误-->
+	<error code="gettranspwd.error">
+		<describe>系统错误：交易密码查询失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 校验：交易密码错误-->
+	<error code="transpwd.error">
+		<describe>校验：交易密码错误</describe>
+		<solution>请重新输入交易密码</solution>
+	</error>
+	
+	<!-- code值查询失败:系统错误-->
+	<error code="getitemname.error">
+		<describe>系统错误：code值查询失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 短信验证码有效期查询失败:系统错误-->
+	<error code="getotpmesvalidtime.error">
+		<describe>信息查询：短信验证码有效期查询失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 获取账户详细信息：查无数据 -->
+	<error code="getaccountdetail.nodata.error">
+	    <describe>信息查询：该用户暂无此类信息</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 获取账户详细信息：系统错误 -->
+	<error code="getaccountdetail.error">
+	    <describe>系统错误：获取账户详细信息出错</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	 
+	<!-- 获取账户信息流水：查无数据 -->
+	<error code="getserialno.nodata.error">
+	    <describe>信息查询：该用户暂无此类信息</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 获取账户信息流水：系统错误 -->
+	<error code="getserialno.error">
+	    <describe>系统错误：获取账户信息流水出错</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 获取账户信息流水：系统错误 -->
+	<error code="getaccountchecknumber.error">
+	    <describe>系统错误：获取账户已校验次数出错</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	 
+	<!-- 绑定银行卡打款校验：获取打款金额无数据 -->
+	<error code="checkbindcark.nodata.error">
+	    <describe>信息查询：获取打款金额出错</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	 
+	<!-- 校验：绑定银行卡打款已超过三天 -->
+	<error code="bindcardtimeout.error">
+	    <describe>信息校验：绑定银行卡打款已超过三天</describe>
+	    <solution>请重新绑卡</solution>
+	</error>
+	
+	<!-- 校验：绑定银行卡打款已超过三天 -->
+	<error code="nobindcard.error">
+	    <describe>信息校验：未绑卡</describe>
+	    <solution>请先绑卡</solution>
+	</error>
+	
+	<!-- 校验：绑定银行卡打款金额不相等 -->
+	<error code="checkbindcark.amount.error">
+	    <describe>信息校验：打款金额与输入金额不相等</describe>
+	    <solution>请输入正确的金额</solution>
+	</error>
+	 
+	<!-- 绑定银行卡打款校验：系统错误 -->
+	<error code="checkbindcark.error">
+	    <describe>系统错误：绑定银行卡打款校验出错</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 绑卡验证费单日代付查询：系统错误 -->
+	<error code="getbindingbankcardtime.error">
+	    <describe>系统错误：绑卡验证费单日代付查询出错</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 绑卡验证费单张卡片从代付次数查询：系统错误 -->
+	<error code="getbindingbankallcardtime.error">
+	    <describe>系统错误：绑卡验证费单张卡片从代付次数出错</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 关联帐号流水号查询：系统错误 -->
+	<error code="getrelaserialno.error">
+	    <describe>系统错误：关联帐号流水号查询出错</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 发起绑卡：系统错误 -->
+	<error code="bindingcardapply.error">
+	    <describe>系统错误：绑卡申请出错</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 提现限额设置：系统错误 -->
+	<error code="setregbankcardwithdrawlimit.error">
+	    <describe>系统错误：提现限额设置出错</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 请求参数：身份证号 -->
+	<error code="certid.error">
+		<describe>校验：身份证号不能为空</describe>
+		<solution>请输入身份证号</solution>
+	</error>
+	
+	<!-- 请求参数：身份证有效期 -->
+	<error code="expirydate.error">
+		<describe>校验：身份证有效期不能为空</describe>
+		<solution>请输入身份证有效期</solution>
+	</error>
+	
+	<!-- 实名认证：系统错误 -->
+	<error code="setuserrealname.error">
+		<describe>校验：实名认证出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 请求参数：证件归属地 -->
+	<error code="certcity.error">
+		<describe>校验：证件归属地不能为空</describe>
+		<solution>请输入证件归属地</solution>
+	</error>
+	
+	<!-- 请求参数：证件输入错误 -->
+	<error code="certinput.error">
+		<describe>证件输入错误，请重新输入</describe>
+		<solution>证件输入错误，请重新输入</solution>
+	</error>
+	
+	
+	
+	<!-- 请求参数：性别 -->
+	<error code="sex.error">
+		<describe>校验：性别不能为空</describe>
+		<solution>请输入性别</solution>
+	</error>
+	
+	<!-- 请求参数：出生日期 -->
+	<error code="birthday.error">
+		<describe>校验：出生日期不能为空</describe>
+		<solution>请输入出生日期</solution>
+	</error>
+	
+	<!-- 请求参数：通行证号码 -->
+	<error code="passno.error">
+		<describe>校验：通行证号码不能为空</describe>
+		<solution>请输入通行证号码</solution>
+	</error>
+	
+	<!-- 请求参数：通行证类型 -->
+	<error code="passtype.error">
+		<describe>校验：通行证类型不能为空</describe>
+		<solution>请输入通行证类型</solution>
+	</error>
+	
+	<!-- 请求参数：通行证有效期 -->
+	<error code="passexpirydate.error">
+		<describe>校验：通行证有效期不能为空</describe>
+		<solution>请输入通行证有效期</solution>
+	</error>
+	
+	<!-- 请求参数：证件类型 -->
+	<error code="idtype.error">
+		<describe>校验：证件类型不能为空</describe>
+		<solution>请输入证件类型</solution>
+	</error>
+	
+	<!-- 请求参数：证件号码 -->
+	<error code="docid.error">
+		<describe>校验：证件号码不能为空</describe>
+		<solution>请输入证件号码</solution>
+	</error>
+	
+		<!-- 绑定银行卡前校验：账户信息不完整 -->
+	<error code="check.useraccount.error">
+		<describe>尊敬的用户，你的手机号码尚未进行认证</describe>
+		<solution>请先完成手机号码认证</solution>
+	</error>
+	
+	<!-- 绑定银行卡前校验：未实名认证 -->
+	<error code="check.userauth.error">
+		<describe>尊敬的用户，你尚未完成实名认证</describe>
+		<solution>请您先完成实名认证</solution>
+	</error>
+	
+	<!-- 绑定银行卡前校验：未设置交易密码 -->
+	<error code="check.transpwd.error">
+		<describe>尊敬的用户，你尚未设置交易密码</describe>
+		<solution>请先完成交易密码设置</solution>
+	</error>
+	
+	<!-- 绑定银行卡前校验：未设置安全问题 -->
+	<error code="check.security.error">
+		<describe>尊敬的用户，你尚未设置安全问题</describe>
+		<solution>请先完成安全问题设置</solution>
+	</error>	
+	
+	<!-- 绑定银行卡前校验：系统错误 -->
+	<error code="checkbeforebindcark.error">
+		<describe>系统错误：绑卡前校验出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 更换绑定银行卡前校验：账户资金不为0 -->
+	<error code="counthavebalance.error">
+		<describe>信息校验：账户资金不为0</describe>
+		<solution>无法更换银行卡</solution>
+	</error>
+	
+	<!-- 更换绑定银行卡前校验：当前投资或借款未结清 -->
+	<error code="haveunclearbus.error">
+		<describe>信息校验：当前账户投资或借款未结清</describe>
+		<solution>请先完成未完成的投资和借款</solution>
+	</error>
+	
+	<!-- 更换绑定银行卡前校验：系统错误 -->
+	<error code="checkbeforeexchangebindcark.error">
+		<describe>系统错误：更换银行卡前校验出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 变更原有银行卡状态：系统错误 -->
+	<error code="changeoriginalcardstatus.error">
+		<describe>系统错误：变更原有银行卡状态出错</describe>
+		<solution>请重新绑定银行卡</solution>
+	</error>
+	
+	<!-- 变更正在绑定银行卡状态：系统错误 -->
+	<error code="changecurrentcardstatus.error">
+		<describe>系统错误：变更原有银行卡状态出错</describe>
+		<solution>请重新绑定银行卡</solution>
+	</error>
+	
+	<!-- 校验：单张卡片绑定次数 -->
+	<error code="bindcardcountlimit.error">
+		<describe>您好，你当前卡片绑卡次数超限</describe>
+		<solution>请联系我们或者更换银行卡绑定，谢谢！</solution>
+	</error>
+	
+	<!-- 校验：用户当日绑卡次数 -->
+	<error code="bindcardcountuserlimit.error">
+		<describe>您好，你当日绑卡次数超限</describe>
+		<solution>请联系我们或者明天再试，谢谢！</solution>
+	</error>
+	
+	<!-- 校验：该银行卡正在绑定中或已被绑定 -->
+	<error code="bindcardisinuse.error">
+		<describe>校验：该银行卡正在绑定中或已被绑定</describe>
+		<solution>请更换银行卡进行绑定</solution>
+	</error>
+	
+	<!-- 校验：打款金额与输入金额不匹配 -->
+	<error code="checkbindcark.amountunlikeness.error">
+		<describe>校验：打款金额与输入金额不匹配</describe>
+		<solution>请重新认证打款金额</solution>
+	</error>
+	
+	<!-- 校验：账户信息查无记录 -->
+	<error code="account.notexist.error">
+		<describe>信息查询：账户信息查无记录</describe>
+		<solution>请检查账户信息是否有误</solution>
+	</error>
+	
+	<!-- 该银行无此交易渠道 -->
+	<error code="transchannel.notexist.error">
+		<describe>信息查询：该银行无此交易渠道</describe>
+		<solution>请更换交易银行或更换交易方式</solution>
+	</error>
+	
+	<!-- 获取交易渠道错误 -->
+	<error code="gettranschannel.error">
+		<describe>系统错误：获取交易渠道错误</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 获取交易限额错误 -->
+	<error code="getlimitamount.error">
+		<describe>系统错误：获取交易限额错误</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!--该银行无此交易限额 -->
+	<error code="translimitamount.notexist.error">
+		<describe>信息查询：该银行无此交易限额</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 获取充值分割时间点错误 -->
+	<error code="getchargedividtime.error">
+		<describe>系统错误：充值分割时间点错误</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!--该银行分割时间点 -->
+	<error code="getchargedividtime.notexist.error">
+		<describe>信息查询：该银行无此充值分割时间点</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	<!-- 新增code值结束 -->
+	
+	
+	
+	<!-- 手机号码错误-->
+	<error code="phonetel.error">
+		<describe>手机号码不能为空</describe>
+		<solution>请输入手机号码</solution>
+	</error>
+	
+	<!-- 手机号码未认证-->
+	<error code="phone.nodata.error">
+		<describe>手机号码未认证</describe>
+		<solution>请认证手机号码</solution>
+	</error>
+	
+	<!-- 确认手机变更-->
+	<error code="confirmmobilechange.error">
+		<describe>系统内部错误</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 确认官网密码找回-->
+	<error code="confirmpasswordretrieve.error">
+		<describe>系统内部错误</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 安全问题-->
+	<error code="securityquestion.error">
+		<describe>系统内部错误</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 安全问题-->
+	<error code="securityquestion.emptyquestion">
+		<describe>安全问题不得为空</describe>
+		<solution>请输入安全问题</solution>
+	</error>
+	
+	<!-- 安全问题-->
+	<error code="securityquestion.emptyanswer">
+		<describe>安全问题答案不得为空</describe>
+		<solution>请输入安全问题答案</solution>
+	</error>
+	
+	<!-- 安全问题-->
+	<error code="securityquestion.securityquestionnotset">
+		<describe>该用户安全问题未设置</describe>
+		<solution>请先设置安全问题</solution>
+	</error>
+	
+	<!-- 安全问题-->
+	<error code="securityquestion.wrongsecurityquestion">
+		<describe>安全问题不匹配</describe>
+		<solution>请确认安全问题是否正确</solution>
+	</error>
+	
+	<!-- 安全问题-->
+	<error code="securityquestion.wrongsecurityanswer">
+		<describe>安全问题答案错误</describe>
+		<solution>请确认安全问题答案是否正确</solution>
+	</error>
+	
+	<!-- 控制台-->
+	<error code="console.emptyboardtype">
+		<describe>公告类型不得为空</describe>
+		<solution>请输入公告类型</solution>
+	</error>
+	
+	<!-- 控制台-->
+	<error code="console.emptyboardno">
+		<describe>公告编号不得为空</describe>
+		<solution>请输入公告编号</solution>
+	</error>
+	
+	<!-- 控制台-->
+	<error code="console.imagenotexists">
+		<describe>图片不存在</describe>
+		<solution>请确认公告编号是否正确</solution>
+	</error>
+	
+	<!-- 控制台-->
+	<error code="console.boardnotexists">
+		<describe>公告不存在</describe>
+		<solution>请确认公告编号是否正确</solution>
+	</error>
+	
+	<!-- 控制台-->
+	<error code="console.error">
+		<describe>系统内部错误</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 控制台-->
+	<error code="console.emptylocation">
+		<describe>广告位不得为空</describe>
+		<solution>请输入广告位</solution>
+	</error>
+	
+	<!-- 控制台-->
+	<error code="console.boardnotfound">
+		<describe>找不到符合条件的公告</describe>
+		<solution>请联系后台管理人员</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 --> 
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0000">
+    	<describe>交易成功</describe>
+     	<solution>请联系服务商</solution>
+ 	</error>
+	 
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="8000">
+	    <describe>签名校验未通过</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	 
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="9999">
+	    <describe>交易失败</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	 
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0001">
+	    <describe>身份证号不匹配</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	 
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0002">
+	    <describe>手机号不匹配</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	 
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0003">
+	    <describe>借款人没有注册</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	 
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0004">
+	    <describe>借款人没有提交借款申请</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	 
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0005">
+	    <describe>匹配不到借款申请ID</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	 
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0006">
+	    <describe>匹配不到安硕贷款受理号</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	 
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0007">
+	    <describe>匹配不到网站用户名</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	 
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0008">
+	    <describe>借款申请ID无效</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	 
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0009">
+	    <describe>最后一期不能提前还款</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0010">
+	    <describe>实还金额与应还金额不等</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0011">
+	    <describe>应还金额为零</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0012">
+	    <describe>日切期间无法进行交易</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0013">
+	    <describe>借款人姓名不匹配</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0014">
+	    <describe>内部生成错误</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0015">
+	    <describe>未定义的接口字段值</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0016">
+	    <describe>匹配不到申请的借据信息</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0017">
+	    <describe>贷款状态为担保代偿中不能还款</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0018">
+	    <describe>贷款状态为已结清不能还款</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0019">
+	    <describe>两系统时间不一致</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0020">
+	    <describe>已投资成功</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0021">
+	    <describe>未到起息日，不能进行提前还款</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0022">
+	    <describe>逾期天数超过代偿需要天数，不允许还款</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0023">
+	    <describe>同申请号存在至少一笔为处理的数据!</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	 <error code="0024">
+	     <describe>未匹配到对应的接口编号!</describe>
+	     <solution>请联系服务商</solution>
+	</error>
+	 
+	 <!-- 与信贷系统交易响应报文 -->
+	<error code="0025">
+	    <describe>未匹配到对应的借据号!</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0026">
+	    <describe>该笔业务正在投资，无法进行取消操作!</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0027">
+	    <describe>该笔业务的流程已取消，请勿重复取消!</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0028">
+	    <describe>该笔业务的流程已放款复核，请不能取消!</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0029">
+	    <describe>未找到业务处理类</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0030">
+	    <describe>此交易流水已成功处理过</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 与信贷系统交易响应报文 -->
+	<error code="0031">
+	    <describe>代扣中不能提前还款</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	 
+	<!-- 签署借款合同认证 -->
+	<error code="queryapplicationauth.error">
+	    <describe>签署借款合同未认证</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 项目已下架 -->
+	<error code="projectend.error">
+	    <describe>项目已下架，投资失败</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 项目未上架 -->
+	<error code="project.nostart">
+	    <describe>项目未上架，您无权查看项目信息，也不能发起投资</describe>
+	    <solution>请等待合适时间再来查看</solution>
+	</error>
+	 
+	<!-- 校验用户手机是否匹配 -->
+	<error code="usermobilevalid.error">
+	    <describe>系统内部错误</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 找回密码 -->
+	<error code="passwordretrieve.error">
+	    <describe>系统内部错误</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 邮件认证 -->
+	<error code="mailauthentication.error">
+	    <describe>系统内部错误</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 用户名手机号邮箱唯一性校验 -->
+	<error code="keyinfocheck.error">
+	    <describe>系统内部错误</describe>
+	    <solution>请联系服务商</solution>
+	</error>
+	
+	<error code="keyinfocheck.emptyaccountno">
+	    <describe>账户内容为空</describe>
+	    <solution>请输入账户内容</solution>
+	</error>
+	
+	<error code="keyinfocheck.emptyaccounttype">
+	    <describe>账户类型为空</describe>
+	    <solution>请输入账户类型</solution>
+	</error>
+	
+	<error code="keyinfocheck.invalidaccounttype">
+	    <describe>账户类型不正确</describe>
+	    <solution>账户内容只能为{N,M,E,O}</solution>
+	</error>
+	
+	<!-- 预签合同 -->
+	<error code="signprecontract.error">
+		<describe>预签合同 出错</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<!-- 用户中心接口 -->
+	<error code="interface.usercenter.synchighrisk.error">
+		<describe>同步高风险标识失败</describe>
+		<solution>请联系服务商</solution>
+	</error>
+	
+	<error code="username.unique.error">
+	    <describe>用户名重复，请重新输入</describe>
+		<solution>用户名重复，请重新输入</solution>
+	</error>
+	
+	<error code="mobile.unique.error">
+	    <describe>手机号重复，请重新输入</describe>
+		<solution>手机号重复，请重新输入</solution>
+	</error>
+	
+	<error code="email.unique.error">
+	    <describe>邮箱重复，请重新输入</describe>
+		<solution>邮箱重复，请重新输入</solution>
+	</error>
+	
+	<error code="account.updated.error">
+	    <describe>用户名和手机已经修改过，请不用重复提交</describe>
+		<solution>用户名和手机已经修改过，请不用重复提交</solution>
+	</error>
+	
+	<error code="account.freeze">
+	    <describe>您的账户已经被冻结,请尽快与我们联系</describe>
+		<solution>请联系我们</solution>
+	</error>
+	
+	<error code="account.tranpassword.empty">
+		<describe>您未设置交易密码，不能发起修改</describe>
+		<solution>您未设置交易密码，不能发起修改</solution>
+	</error>
+	<error code="account.tranpassword.eqold">
+		<describe>新的交易密码不能与原交易密码一样</describe>
+		<solution>新的交易密码不能与原交易密码一样</solution>
+	</error>
+	
+	<error code="account.freeze">
+	    <describe>您的账户已经被冻结,请尽快与我们联系</describe>
+		<solution>请联系我们</solution>
+	</error>
+	
+	<error code="bindcard.again.error">
+	    <describe>同张卡不能连续打款</describe>
+		<solution>请完成绑卡金额校验</solution>
+	</error>
+	
+	<error code="account.tranpassword.counterror">
+		<describe>当前交易密码输错超过3次</describe>
+		<solution>请明天再尝试或找回交易密码</solution>
+	</error>
+	
+	<error code="0044">
+	    <describe>调用电销失败</describe>
+		<solution>请联系我们</solution>
+	</error>
+	<error code="0042">
+	    <describe>电销返回结果失败</describe>
+		<solution>请联系我们</solution>
+	</error>
+	
+	<error code="common.emptyPass">
+	    <describe>通行证号码为空</describe>
+		<solution>请输入通行证号码</solution>
+	</error>
+	
+	<error code="passno.exist.error">
+	    <describe>通行证号码已存在</describe>
+		<solution>请重新输入通行证号码</solution>
+	</error>
+	
+	<error code="common.emptyType">
+	    <describe>证件类型为空</describe>
+		<solution>请输入证件类型</solution>
+	</error>
+	
+	<error code="common.emptyDocID">
+	    <describe>证件号为空</describe>
+		<solution>请输入证件号</solution>
+	</error>
+	
+	<error code="certno.exist.error">
+	    <describe>证件号码已存在</describe>
+		<solution>请重新输入证件号码</solution>
+	</error>
+	<error code="pic.notexist.error">
+	    <describe>图片不存在</describe>
+		<solution>请检查图片表数据</solution>
+	</error>
+	<!-- 安全问题不能为空 -->
+	<error code="modifysecurityquestion.empty">
+	    <describe>安全问题不能为空</describe>
+		<solution>请重输入安全问题</solution>
+	</error>
+	<!-- 问题答案不能为空 -->
+	<error code="modifysecurityanswer.empty">
+	    <describe>问题答案不能为空</describe>
+		<solution>请输入问题答案</solution>
+	</error>
+	<!-- 紧急联系人不能为空 -->
+	<error code="modifyemergencyperson.empty">
+	    <describe>紧急联系人不能为空</describe>
+		<solution>请输入紧急联系人</solution>
+	</error>
+	<!-- 紧急联系人联系方式不能为空 -->
+	<error code="modifyemergencyphone.empty">
+	    <describe>紧急联系人联系方式不能为空</describe>
+		<solution>请输入联系方式</solution>
+	</error>
+		<!-- 绑定手机，手机号码不能为空 -->
+	<error code="modifyphonetel.empty">
+	    <describe>手机号码不能为空</describe>
+		<solution>请输入手机号码</solution>
+	</error>
+			<!-- 绑定邮箱，邮箱不能为空 -->
+	<error code="modifymail.empty">
+	    <describe>邮箱不能为空</describe>
+		<solution>请输入邮箱</solution>
+	</error>
+			<!-- 绑定手机，输入的原手机号码不对 -->
+	<error code="modifyphonetel.oldphonetelnotexist">
+		<describe>你输入的原手机号码不对</describe>
+		<solution>请重新输入原手机号码</solution>
+	</error>
+	
+				<!-- 发送邮件，流水号不能为空 -->
+	<error code="mailserialno.isempty">
+		<describe>邮件流水号不存在</describe>
+		<solution>请重新输入验证</solution>
+	</error>
+	
+				<!-- 发送邮件，流水号错误-->
+	<error code="mailserialno.iserror">
+		<describe>邮件流水号错误</describe>
+		<solution>请重新验证</solution>
+	</error>
+				<!-- 发送邮件，邮件验证信息错误 -->
+	<error code="mailchkmsg.iserror">
+		<describe>邮件验证信息错误</describe>
+		<solution>请重新验证</solution>
+	</error>
+				<!-- 发送邮件，邮件验证信息不能为空 -->
+	<error code="mailchkmsg.isempty">
+		<describe>邮件验证信息不存在</describe>
+		<solution>请重新验证</solution>
+	</error>
+	
+</Errors>

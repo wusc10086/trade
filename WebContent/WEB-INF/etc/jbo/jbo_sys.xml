@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<jbo>
+    <package name="jbo.sys">
+        <class name="code_library" label="字典表" keyAttributes="codeno,itemno">
+            <attributes>
+                <attribute name="codeno" label="code编号" type="STRING" length="32"/>
+                <attribute name="itemno" label="item编号" type="STRING" length="32"/>
+                <attribute name="itemname" label="item名称" type="STRING" length="250"/>
+                <attribute name="bankno" label="bankno" type="STRING" length="32"/>
+                <attribute name="sortno" label="sortno" type="STRING" length="32"/>
+                <attribute name="isinuse" label="是否可用" type="STRING" length="18"/>
+                <attribute name="relativecode" label="权限" type="STRING" length="18"/>
+                <attribute name="itemdescribe" label="描述" type="STRING" length="1000"/><!--广告位 广告类型  -->
+                <attribute name="attribute1" label="预留" type="STRING" length="1600"/>
+                <attribute name="attribute2" label="预留" type="STRING" length="1600"/>
+                <attribute name="attribute3" label="预留" type="STRING" length="1600"/>
+                <attribute name="attribute4" label="预留" type="STRING" length="1600"/><!--广告位 高度  -->
+                <attribute name="attribute5" label="预留" type="STRING" length="1600"/><!--广告位 宽度  -->
+                <attribute name="attribute6" label="预留" type="STRING" length="1600"/><!--广告位 广告个数  -->
+            </attributes>
+            <manager>
+                <managerProperties>
+                    <property name="table" value="code_library" type="STRING"/>
+                    <property name="createKey" value="true" type="STRING"/>
+                </managerProperties>
+            </manager>
+        </class>
+        <class name="CODE_LIBRARY" label="字典表" keyAttributes="codeno,itemno">
+            <attributes>
+                <attribute name="codeno" label="code编号" type="STRING" length="32"/>
+                <attribute name="itemno" label="item编号" type="STRING" length="32"/>
+                <attribute name="itemname" label="item名称" type="STRING" length="250"/>
+                <attribute name="bankno" label="bankno" type="STRING" length="32"/>
+                <attribute name="sortno" label="sortno" type="STRING" length="32"/>
+                <attribute name="isinuse" label="是否可用" type="STRING" length="18"/>
+                <attribute name="relativecode" label="权限" type="STRING" length="18"/>
+                <attribute name="itemdescribe" label="描述" type="STRING" length="1000"/><!--广告位 广告类型  -->
+                <attribute name="attribute1" label="预留" type="STRING" length="1600"/>
+                <attribute name="attribute2" label="预留" type="STRING" length="1600"/>
+                <attribute name="attribute3" label="预留" type="STRING" length="1600"/>
+                <attribute name="attribute4" label="预留" type="STRING" length="1600"/><!--广告位 高度  -->
+                <attribute name="attribute5" label="预留" type="STRING" length="1600"/><!--广告位 宽度  -->
+                <attribute name="attribute6" label="预留" type="STRING" length="1600"/><!--广告位 广告个数  -->
+            </attributes>
+            <manager>
+                <managerProperties>
+                    <property name="table" value="code_library" type="STRING"/>
+                    <property name="createKey" value="true" type="STRING"/>
+                </managerProperties>
+            </manager>
+        </class>
+        <class name="ti_board_list" label="通告栏" keyAttributes="BoardNo">
+            <attributes>
+                <attribute name="BOARDNO" label="公告编号" type="STRING" length="40"/>
+				<attribute name="BOARDTYPE" label="公告类型" type="STRING" length="40"/>
+				<attribute name="BOARDNAME" label="公告名称" type="STRING" length="150"/>
+				<attribute name="BOARDTITLE" label="公告标题" type="STRING" length="500"/>
+				<attribute name="BOARDDESC" label="公告描述" type="STRING" length="4000"/>
+				<attribute name="ISPUBLISH" label="是否发布" type="STRING" length="10"/>
+				<attribute name="PUBLISHDATE" label="发布日期" type="STRING" length="20"/>
+				<attribute name="PUBLISHER" label="发布人" type="STRING" length="40"/>
+				<attribute name="CLICKCOUNT" label="点击次数" type="DOUBLE" length="18" scale="2"/>
+				<attribute name="ISNEW" label="是否新" type="STRING" length="10"/>
+				<attribute name="ISEJECT" label="是否弹出" type="STRING" length="10"/>
+				<attribute name="ADLOCATION" label="广告位置" type="STRING" length="40"/>
+				<attribute name="ADHEIGHT" label="广告高度" type="DOUBLE" length="12" scale="2"/>
+				<attribute name="ADWIDTH" label="广告宽度" type="DOUBLE" length="12" scale="2"/>
+				<attribute name="ADTYPE" label="广告位类型" type="STRING" length="10"/>
+				<attribute name="ADLINK" label="广告链接" type="STRING" length="500"/>
+				<attribute name="REMARK" label="备注" type="STRING" length="4000"/>
+				<attribute name="STATUS" label="状态" type="STRING" length="10"/>
+				<attribute name="FILENAME" label="公告文件名" type="STRING" length="300"/>
+				<attribute name="FILELOCATION" label="公告文件路径" type="STRING" length="1000"/>
+				<attribute name="CONTENTTYPE" label="内容类型" type="STRING" length="60"/>
+				<attribute name="CONTENTLENGTH" label="内容长度" type="STRING" length="60"/>
+				<attribute name="INPUTUSER" label="录入人" type="STRING" length="40"/>
+				<attribute name="INPUTTIME" label="录入时间" type="STRING" length="20"/>
+				<attribute name="UPLOADUSER" label="上传人" type="STRING" length="40"/>
+				<attribute name="UPLOADTIME" label="上传时间" type="STRING" length="20"/>
+				<attribute name="UPDATEUSER" label="更新人" type="STRING" length="40"/>
+				<attribute name="UPDATETIME" label="更新时间" type="STRING" length="20"/>
+            </attributes>
+            <manager>
+                <managerProperties>
+                    <property name="table" value="ti_board_list" type="STRING"/>
+                    <property name="createKey" value="true" type="STRING"/>
+                </managerProperties>
+            </manager>
+        </class>
+    </package>
+    <package name="jbo.trade.system">
+		<class name="VERSION_RESPONSE" label="返回版本号">
+			<attributes>
+				<attribute name="VERSIONNAME" label="版本号" type="STRING"
+					length="32" />
+				<attribute name="URL" label="下载地址" type="STRING" length="32" />
+			</attributes>
+		</class>
+		<class name="AME_REPORT_ERROR" label="错误报告" keyAttributes="SERIALNO">
+			<attributes>
+			    <attribute name="SERIALNO" label="流水号" type="STRING" length="32" />
+				<attribute name="DEVICETYPE" label="设备类型" type="STRING" length="32" />
+				<attribute name="MAINCLASS" label="出错的主类" type="STRING" length="255" />
+				<attribute name="INSERTTIME" label="更新时间" type="STRING" length="255" />
+				<attribute name="MESSAGE" label="出错信息" type="STRING" length="1000" />
+				<attribute name="DETAIL1" label="出错明细1" type="STRING" length="4000" />
+				<attribute name="DETAIL2" label="出错明细2" type="STRING" length="4000" />
+			</attributes>
+			<manager>
+				<managerProperties>
+					<property name="table" value="AME_REPORT_ERROR" />
+					<property name="createKey" value="true" />
+				</managerProperties>
+			</manager>
+		</class>
+		
+		<class name="AME_RUNTIME" label="服务运行时间记录" keyAttributes="SERIALNO">
+			<attributes>
+			    <attribute name="SERIALNO" label="流水号" type="STRING" length="32" />
+				<attribute name="METHOD" label="交易名" type="STRING" length="80" />
+				<attribute name="REQUESTFORMAT" label="请求参数类型" type="STRING" length="10" />
+				<attribute name="REQUESTSTR" label="请求参数" type="STRING" length="1000" />
+				<attribute name="RESPONSESTR" label="响应参数" type="STRING" length="1000" />
+				<attribute name="STARTTIME" label="开始时间" type="STRING" length="20" />
+				<attribute name="FINISHTIME" label="结束时间" type="STRING" length="20" />
+				<attribute name="SESSIONKEY" label="SESSIONKEY" type="STRING" length="64" />
+				<attribute name="USERID" label="用户" type="STRING" length="32" />
+				<attribute name="IP" label="IP" type="STRING" length="15" />
+				<attribute name="DEVICETYPE" label="设备类型" type="STRING" length="15" />
+			</attributes>
+			<manager>
+				<managerProperties>
+					<property name="table" value="AME_RUNTIME" />
+					<property name="createKey" value="true" />
+					<property name="audit" value="false"/>
+				</managerProperties>
+			</manager>
+		</class>
+	</package>
+	<package name="jbo.awe">
+        <class name="AUDIT_INFO" label="数据库审计" keyAttributes="SerialNo">
+            <attributes>
+                <attribute name="SERIALNO" label="流水号" type="STRING" length="32"/>
+                <attribute name="OPERATOR" label="操作人" type="STRING" length="80"/>
+                <attribute name="SERVERADDRESS" label="服务器地址" type="STRING" length="80"/>
+                <attribute name="CLIENTADDRESS" label="客户端地址" type="STRING" length="80"/>
+                <attribute name="APPLICATION" label="应用名" type="STRING" length="80"/>
+                <attribute name="ADDITIONALINFO" label="扩展信息" type="STRING" length="200"/>
+                <attribute name="RECORDTYPE" label="记录类型" type="STRING" length="32"/>
+                <attribute name="RECORDACTION" label="记录动作" type="STRING" length="32"/><!--广告位 广告类型  -->
+                <attribute name="RECORDTARGET" label="记录目标" type="STRING" length="32"/>
+                <attribute name="AUDITTIME" label="修改时间" type="STRING" length="40"/>
+                <attribute name="AUDITDATA" label="修改内容" type="STRING" length="4000"/>
+            </attributes>
+            <manager>
+                <managerProperties>
+                    <property name="table" value="AUDIT_INFO" type="STRING"/>
+                    <property name="createKey" value="true" type="STRING"/>
+                   	<property name="audit" value="false"/>
+                </managerProperties>
+            </manager>
+        </class>
+	</package>
+</jbo>

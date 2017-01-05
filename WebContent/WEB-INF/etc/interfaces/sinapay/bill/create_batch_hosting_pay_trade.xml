@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="GB2312"?>
+<config>
+	<!-- 
+	 -->
+	<messages>
+		<message id="新浪_创建批量托管代付交易" name="新浪_创建批量托管代付交易" connection="SINAPAY_CONNECTION_BILL">
+			<extendProperties>	
+				 <property name="transCode" value="create_batch_hosting_pay_trade" />	
+				 <property name="LogField" value="out_pay_no" />	
+			</extendProperties>
+			 <request executeObject="新浪_创建批量托管代付交易_请求报文" 
+			 		  messageclass="com.amarsoft.message.common.message.XmlMessage" 
+					  fieldclass="com.amarsoft.message.common.message.XmlField"   
+			 ></request>
+			 <response 
+			 		executeObject="公共反馈报文"
+			 		messageclass="com.amarsoft.message.common.message.JSONMessage" 
+					fieldclass="com.amarsoft.message.common.message.JSONField" 
+			 		></response>
+		</message>	
+	</messages>
+	
+	<executeObjects>
+			<executeObject
+				name="新浪_创建批量托管代付交易_请求报文"
+				describe="新浪_创建批量托管代付交易_请求报文" 
+				elementName="sinapay"
+				mulRows="false">
+				 <extendProperties>
+				</extendProperties>
+				<field name="service" elementName="service" describe="接口名称" type="String" size="20" valuesource="messageProperty" value="${transCode}" required="true"/>
+				<field name="version" elementName="version" describe="接口版本" type="String" size="20" valuesource="DEFAULT" value="1.0" required="true"/>
+				<field name="request_time" elementName="request_time" describe="请求时间" type="String" size="20" valuesource="EXPRESSION" value="Helper.getToday('')+Helper.getNow('')" required="true"/>
+				<field name="partner_id" elementName="partner_id" describe="合作者身份ID" type="String" size="20" valuesource="messageProperty" value="${Templet.partner_id}" required="true"/>
+				<field name="_input_charset" elementName="_input_charset" describe="商户网站使用的编码格式" type="String" size="20" valuesource="messageProperty" value="${Templet.input_charset}" required="true"/>
+				
+				<!-- 参数 -->
+				<field name="out_pay_no" elementName="out_pay_no" describe="支付请求号" type="String" size="20" valuesource="EXPRESSION" value="Helper.getToday('')+'${Templet.partner_id}'+SinaPayUtils.getOrderNo()" required="true"/>
+				<!-- 
+				1001	代收投资金
+				1002	代收还款金
+				2001	代付借款金
+				2002	代付（本金/收益）金
+				 -->
+				<field name="out_trade_code" elementName="out_trade_code" describe="交易码" type="String" size="20" valuesource="DEFAULT" value="2001" required="true"/>
+				 <field name="trade_list" elementName="trade_list" describe="付款用户ID" type="String" size="20" valuesource="EXPRESSION" value="balance^${AMOUNT}^SAVING_POT" required="true"/>
+				<field name="notify_method" elementName="notify_method" describe="通知方式" type="String" size="20" valuesource="DEFAULT" value="batch_notify" required="true"/>
+			</executeObject>
+				
+	</executeObjects>
+</config>

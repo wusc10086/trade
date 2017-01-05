@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Domain ConfigurationVersion="1.0.0.0" Name="am@rBank">
+
+	<WebRootPath>/P2P_Loan</WebRootPath>
+	<ResourcesPath>/Resources/images</ResourcesPath>
+
+	<WebServer>Tomcat</WebServer>
+	<DataSource>java:/comp/env/jdbc/p2ploan</DataSource>
+
+	<DebugMode>1</DebugMode>
+	<RunTimeDebugMode>1</RunTimeDebugMode>
+
+	<PostChange>2</PostChange>
+	<DBChange>2</DBChange>
+
+	<TransDebugMode>1</TransDebugMode>
+	<TransDebugMode_rem>0:NoSql,1:AllSql,2:ExecuteSql</TransDebugMode_rem>
+
+	<DBName>oracle</DBName>
+	<OSName>NT</OSName>
+	<CurSlash>\\</CurSlash>
+
+	<RunMode>Development</RunMode>
+</Domain>

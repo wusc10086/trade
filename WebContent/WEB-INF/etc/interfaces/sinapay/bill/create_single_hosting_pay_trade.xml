@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="GB2312"?>
+<config>
+	<!-- 
+	 -->
+	<messages>
+		<message id="新浪_创建单笔托管代付交易" name="新浪_创建单笔托管代付交易" connection="SINAPAY_CONNECTION_BILL">
+			<extendProperties>	
+				 <property name="transCode" value="create_single_hosting_pay_trade" />	
+				 <property name="LogField" value="out_trade_no" />	
+				 <property name="successField" value="trade_status" />
+				  <property name="successValue" value="PAY_FINISHED" />
+				 
+			</extendProperties>
+			 <request executeObject="新浪_创建单笔托管代付交易_请求报文" 
+			 		  messageclass="com.amarsoft.message.common.message.XmlMessage" 
+					  fieldclass="com.amarsoft.message.common.message.XmlField"   
+			 ></request>
+			 <response 
+			 		executeObject="公共反馈报文"
+			 		messageclass="com.amarsoft.message.common.message.JSONMessage" 
+					fieldclass="com.amarsoft.message.common.message.JSONField" 
+			 		></response>
+		</message>	
+	</messages>
+	
+	<executeObjects>
+			<executeObject
+				name="新浪_创建单笔托管代付交易_请求报文"
+				describe="新浪_创建单笔托管代付交易_请求报文" 
+				elementName="sinapay"
+				mulRows="false">
+				 <extendProperties>
+				</extendProperties>
+				<field name="service" elementName="service" describe="接口名称" type="String" size="20" valuesource="messageProperty" value="${transCode}" required="true"/>
+				<field name="version" elementName="version" describe="接口版本" type="String" size="20" valuesource="DEFAULT" value="1.0" required="true"/>
+				<field name="request_time" elementName="request_time" describe="请求时间" type="String" size="20" valuesource="EXPRESSION" value="Helper.getToday('')+Helper.getNow('')" required="true"/>
+				<field name="partner_id" elementName="partner_id" describe="合作者身份ID" type="String" size="20" valuesource="messageProperty" value="${Templet.partner_id}" required="true"/>
+				<field name="_input_charset" elementName="_input_charset" describe="商户网站使用的编码格式" type="String" size="20" valuesource="messageProperty" value="${Templet.input_charset}" required="true"/>
+				
+				<!-- 参数 -->
+				<field name="out_trade_no" elementName="out_trade_no" describe="交易订单号" type="String" size="20" valuesource="EXPRESSION" value="Helper.getToday('')+'${Templet.partner_id}'+SinaPayUtils.getOrderNo()" required="true"/>
+				<!-- 
+				1001	代收投资金
+				1002	代收还款金
+				2001	代付借款金
+				2002	代付（本金/收益）金
+				 -->
+				<field name="out_trade_code" elementName="out_trade_code" describe="交易码" type="String" size="20" valuesource="IN" value="${TRANSCODE}" required="true"/>
+				<field name="payee_identity_id" elementName="payee_identity_id" describe="收款人标识" type="String" size="20" valuesource="IN" value="${USERID}" required="true"/>
+				<!-- <field name="payee_identity_type" elementName="payee_identity_type" describe="收款人标识类型" type="String" size="20" valuesource="DEFAULT" value="UID" required="true"/>
+					 <field name="account_type" elementName="account_type" describe="收款人账户类型" type="String" size="20" valuesource="DEFAULT" value="SAVING_POT" required="true"/>
+				-->
+				<field name="payee_identity_type" elementName="payee_identity_type" describe="收款人标识类型" type="String" size="20" valuesource="FUNCTION" value="
+					if('${USERID}'=='${CONNECTION.ORG_ACCOUNT_NO}')
+					{
+						return 'EMAIL';
+					}
+					else if('${USERID}'=='${CONNECTION.MARKETING_ACCOUNT_NO}') /*营销账户*/
+					{
+						return 'EMAIL';
+					}
+					else
+					{
+						return 'UID';
+					}
+				" required="true"/>
+				
+				
+				<field name="account_type" elementName="account_type" describe="账户类型" type="String" size="20" valuesource="FUNCTION" value="
+					if('${USERID}'=='${CONNECTION.ORG_ACCOUNT_NO}'&amp;&amp;'${ACCOUNTTYPE}'=='010') /*收取风险金*/
+					{
+						return 'RESERVE';
+					}
+					else if('${USERID}'=='${CONNECTION.ORG_ACCOUNT_NO}') /**其他费用*/
+					{
+						return 'BASIC';
+					}
+					else if('${USERID}'=='${CONNECTION.MARKETING_ACCOUNT_NO}') /*营销账户*/
+					{
+						return 'BASIC';
+					}
+					else
+					{
+						return 'SAVING_POT';
+					}
+				" required="true"/>
+				
+				
+				<field name="amount" elementName="amount" describe="金额" type="Double" size="20" valuesource="IN" value="${AMOUNT}" required="true"/>
+				<field name="summary" elementName="summary" describe="摘要" type="Double" size="20" valuesource="IN" value="${REMARK}" required="true"/>
+			</executeObject>
+				
+	</executeObjects>
+</config>

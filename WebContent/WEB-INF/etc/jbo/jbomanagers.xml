@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GB18030"?>
+<jbo>
+  <managers>
+        <!-- 必须有一个ID为default的管理器处理一般的类的管理 -->
+        <!-- p2p的数据源 -->
+		<manager id="default" managerClass="com.amarsoft.are.jbo.impl.ALSBizObjectManager"> 
+			<describe>ALS7全局缺省使用的管理器</describe>
+			<managerProperties>
+				<property name="database" value="als"/>
+				<property name="audit" value="true"/>
+				<!--  
+				下面三个属性是ALS管理器生成序列号默认的参数，每个使用这个管理器的类可根据情况copy到自己的类中
+				<property name="createKey" value="false"/>
+				<property name="keyDatePrefix" value="yyyyMMdd"/>
+				<property name="keyNumberLength" value="8"/>
+				-->
+			</managerProperties>
+		</manager>
+		<!-- <manager id="p2pcore" managerClass="com.amarsoft.are.jbo.impl.ALSBizObjectManager"> 
+			<describe>ALS7全局缺省使用的管理器</describe>
+			<managerProperties>
+				<property name="database" value="p2pcore"/>
+				<property name="audit" value="true"/>
+				 
+				下面三个属性是ALS管理器生成序列号默认的参数，每个使用这个管理器的类可根据情况copy到自己的类中
+				<property name="createKey" value="false"/>
+				<property name="keyDatePrefix" value="yyyyMMdd"/>
+				<property name="keyNumberLength" value="8"/>
+				
+			</managerProperties>
+		</manager> -->
+  </managers>
+</jbo>
+

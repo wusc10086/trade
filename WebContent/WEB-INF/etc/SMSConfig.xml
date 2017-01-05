@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sms>
+	<!-- 公共参数区 -->
+	<Properties>
+		<property id="EntName" desc="企业名称:外滩金融的践行者旗下网上投融资平台" type="String" valuesource="DEFAULT" value=""></property>
+		<property id="CallCenterNo" desc="400电话号码" type="String" valuesource="DEFAULT" value="400-xxxx-xxxx"></property>
+	</Properties>
+
+	<!-- 短信模板配置 -->
+	<Templets>
+		<Templet id="P2P_REG" desc="P2P交易平台注册验证">
+			<ExtendProperties>
+				<property id="AuthCode" desc="验证码" type="String"	valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：动态验证码为:AuthCode。您正在注册会员，有效期5分钟。 </SMSText>
+		</Templet>
+		
+		<Templet id="P2P_SJBGYZ" desc="P2P交易平台手机号变更验证">
+			<ExtendProperties>
+				<property id="AuthCode" desc="验证码" type="String"	valuesource="IN"></property>
+			</ExtendProperties>
+			<SMSText>温馨提示：动态验证码为:AuthCode。您申请变更绑定的手机，有效期5分钟，如非本人操作请登陆网站联系我们。</SMSText>
+		</Templet>
+		<Templet id="P2P_SJBGCG" desc="P2P交易平台手机号变更成功">
+			<ExtendProperties>
+				<property id="Date" desc="日期-中文 (X)月(X)日(X)点(X)分 " type="String" valuesource="IN"></property>
+			</ExtendProperties>
+				
+			<SMSText>温馨提示：尊敬的会员，您于:Date修改手机号码成功，如非本人操作请登陆网站联系我们。</SMSText>
+		</Templet>
+		
+		<Templet id="P2P_ZHDLMM" desc="P2P交易平台找回登录密码">
+			<ExtendProperties>
+				<property id="AuthCode" desc="验证码" type="String"	valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：动态验证码为:AuthCode。尊敬的会员，您正在申请重置登录密码，有效期5分钟。</SMSText>
+		</Templet>
+		<Templet id="P2P_ZHJYMM" desc="P2P交易平台找回交易密码">
+			<ExtendProperties>
+				<property id="AuthCode" desc="验证码" type="String"	valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：动态验证码为:AuthCode。尊敬的会员，您正在申请重置交易密码，有效期5分钟。</SMSText>
+		</Templet>
+	
+		<Templet id="P2P_JYMMBGCG" desc="P2P交易平台登录密码变更成功">
+			<ExtendProperties>
+				<property id="Date" desc="日期-中文 (X)月(X)日(X)点(X)分 " type="String" valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：尊敬的会员，您于:Date修改登录密码成功，如非本人操作请登陆网站联系我们。</SMSText>
+		</Templet>
+		<Templet id="P2P_YXBGCG" desc="P2P交易平台邮箱变更成功">
+			<ExtendProperties>
+				<property id="Date" desc="日期-中文 (X)月(X)日(X)点(X)分 " type="String" valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：尊敬的会员，您于:Date修改邮箱成功，如非本人操作请登陆网站联系我们。</SMSText>
+		</Templet>
+		<Templet id="P2P_TZQRYZ" desc="P2P交易平台投资确认验证">
+			<ExtendProperties>
+				<property id="ProjectName" desc="产品名称 " type="String" valuesource="IN"></property>
+				<property id="Balance" desc="投资金额 " type="Double" valuesource="IN"></property>
+				<property id="AuthCode" desc="验证码" type="String"	valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：动态验证码:AuthCode。您正在投资:ProjectName，投资金额:Balance元，有效期5分钟。</SMSText>
+		</Templet>
+		<Templet id="P2P_TZCG" desc="P2P交易平台投资成功">
+			<ExtendProperties>
+				<property id="ProjectName" desc="产品名称 " type="String" valuesource="IN"></property>
+				<property id="Balance" desc="投资金额 " type="Double" valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：您已成功投资:ProjectName，投资金额为:Balance元。</SMSText>
+		</Templet>
+		<Templet id="P2P_FKCG" desc="P2P交易平台放款成功">
+			<ExtendProperties>
+				<property id="ContractNo" desc="合同号 " type="String" valuesource="IN"></property>
+				<property id="PayAmount" desc="还款金额 " type="String" valuesource="IN"></property>
+				<property id="Month" desc="月份 " type="String" valuesource="IN"></property>
+				<property id="Day" desc="日期 " type="String" valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：您合同号为:ContractNo的贷款已放款。款项将于1个工作日内以自动提现的方式转入您的银行卡。首次还款日为:Month月:Day日，还款金额:PayAmount元。</SMSText>
+		</Templet>
+		<Templet id="P2P_TXYZ" desc="P2P交易平台提现验证">
+			<ExtendProperties>
+				<property id="Amount" desc="发生金额 " type="Double" valuesource="IN"></property>
+				<property id="AuthCode" desc="验证码" type="String"	valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：动态验证码为:AuthCode。尊敬的会员，您申请提现:Amount元，有效期5分钟。</SMSText>
+		</Templet>
+		<Templet id="P2P_TXSB" desc="P2P交易平台提现失败">
+			<ExtendProperties>
+				<property id="Date" desc="日期-中文 (X)月(X)日(X)点(X)分 " type="String" valuesource="IN"></property>
+				<property id="Amount" desc="发生金额 " type="Double" valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：您于:Date申请提现:Amount元，操作失败。请登陆网站重新操作或登陆网站联系我们。</SMSText>
+		</Templet>
+		<Templet id="P2P_TXCG" desc="P2P交易平台提现成功">
+			<ExtendProperties>
+				<property id="Date" desc="日期-中文 (X)月(X)日(X)点(X)分 " type="String" valuesource="IN"></property>
+				<property id="Amount" desc="发生金额 " type="Double" valuesource="IN"></property>
+				<property id="CardEnd" desc="卡号后四位 " type="Double" valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：尊敬的会员，您于:Date申请提现:Amount元，已成功转入您尾号:CardEnd的银行卡。</SMSText>
+		</Templet>
+		
+		<Templet id="P2P_HKCG" desc="P2P交易平台还款成功">
+			<ExtendProperties>
+				<property id="PayAmount" desc="应还金额 " type="String" valuesource="IN"></property>
+				<property id="ActualAmount" desc="实际归还 " type="String" valuesource="IN"></property>
+				<property id="DebtAmount" desc="剩余金额 " type="String" valuesource="IN"></property>
+				<property id="ContractNo" desc="合同号 " type="String" valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：您合同号为:ContractNo的贷款成功还款:PayAmount元。</SMSText>
+		</Templet>
+		<Templet id="P2P_HKCGBZE" desc="P2P交易平台部分还款成功">
+			<ExtendProperties>
+				<property id="ProjectName" desc="产品名称 " type="String" valuesource="IN"></property>
+				<property id="Date" desc="收款日 " type="String" valuesource="IN"></property>
+				<property id="Amount" desc="发生金额 " type="String" valuesource="IN"></property>
+				<property id="ContractNo" desc="合同号 " type="String" valuesource="IN"></property>
+				<property id="DebtAmount" desc="剩余金额 " type="String" valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：您合同号为:ContractNo的贷款还款:Amount元，待还金额:DebtAmount元，请尽快至平台还款。</SMSText>
+		</Templet>
+		
+		<!-- 新增短信 -->
+		<Templet id="P2P_SKCG" desc="P2P交易平台收款成功">
+			<ExtendProperties>
+				<property id="ProjectName" desc="产品名称 " type="String" valuesource="IN"></property>
+				<property id="Date" desc="收款日 " type="String" valuesource="IN"></property>
+				<property id="Amount" desc="发生金额 " type="Double" valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：您投资的:ProjectName，于:Date收款:Amount元，已到账。</SMSText>
+		</Templet>
+		
+		
+		<Templet id="P2P_SKCGLAST" desc="P2P交易平台收款成功（最后一期）">
+			<ExtendProperties>
+				<property id="ProjectName" desc="产品名称 " type="String" valuesource="IN"></property>
+				<property id="Date" desc="收款日 " type="String" valuesource="IN"></property>
+				<property id="Amount" desc="发生金额 " type="Double" valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：您投资的:ProjectName，收款已全部结清。</SMSText>
+		</Templet>
+		<Templet id="P2P_DKHQ" desc="P2P交易平台借款人贷款还清">
+			<ExtendProperties>
+				<property id="ContractNo" desc="合同号" type="String" valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：您合同号为:ContractNo的贷款，已全部还清。</SMSText>
+		</Templet>
+	
+		
+		<Templet id="P2P_JDZHTZ" desc="P2P交易平台解冻账户短信">
+			<ExtendProperties>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：尊敬的会员，您的账户已解冻，可正常进行操作，如有疑问请登陆网站联系我们。</SMSText>
+		</Templet>
+		
+		<Templet id="P2P_DJZHTZ" desc="P2P交易平台冻结账户短信">
+			<ExtendProperties>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：尊敬的会员，因异常交易行为，您的账户已被冻结，我司会尽快处理并将结果通知于您，如有疑问请登陆网站联系我们。</SMSText>
+		</Templet>
+		
+		<Templet id="LSC_BERROR" desc="批量报错发送短信">
+			<ExtendProperties>
+				<property id="AccountDate" desc="会计日期" type="String" valuesource="IN"></property>
+				<property id="ExecuteUnit" desc="出错单元名" type="String" valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>您好,:AccountDate日日终批量步骤:ExecuteUnit发生错误</SMSText>
+		</Templet>
+		
+		<Templet id="P2P_CZCG" desc="P2P交易平台充值成功">
+			<ExtendProperties>
+				<property id="Date" desc="日期-中文 (X)月(X)日(X)点(X)分 " type="String" valuesource="IN"></property>
+				<property id="Amount" desc="发生金额 " type="Double" valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：您于:Date申请充值:Amount元，已成功到账。</SMSText>
+		</Templet>
+		<Templet id="P2P_CZSB" desc="P2P交易平台充值失败">
+			<ExtendProperties>
+				<property id="Date" desc="日期-中文 (X)月(X)日(X)点(X)分 " type="String" valuesource="IN"></property>
+				<property id="Amount" desc="发生金额 " type="Double" valuesource="IN"></property>
+			</ExtendProperties>
+			
+			<SMSText>温馨提示：您于:Date申请充值:Amount元，操作失败。请登陆网站重新操作或登陆网站联系我们。</SMSText>
+		</Templet>
+	</Templets>
+</sms>

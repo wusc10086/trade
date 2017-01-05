@@ -1,0 +1,1735 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Config>
+	<trades>
+	
+		<!-- 复合交易 -->
+		<trade method="system.multiple.handler">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.util.MultipleHandler</handler>
+		</trade>
+
+		<!-- 投资项目列表 -->
+		<trade method="queryprojectlist">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.project.ProjectSelectHandler</handler>
+		</trade>
+		
+		<!-- 首页统计 -->
+		<trade method="index.count">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.IndexCountHandler</handler>
+		</trade>
+
+	   <!-- 投资项目详情 -->
+		<trade method="queryprojectinfo">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.project.ProjectdetailHandler</handler>
+		</trade>
+		
+	   <!-- 投资前验证 -->
+		<trade method="userinvestvalidation">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.project.InvestUserCheckHandler</handler>
+		</trade>
+		
+		
+		<!--借款管理-借款申请查询-->
+		<trade method="queryapplicationlist">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.QueryApplicationListHandler</handler>
+		</trade>
+		
+			<!-- 签署借款合同认证 -->
+		<trade method="queryapplicationauth">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.QueryApplicationAuthHandler</handler>
+		</trade> 
+		
+	   <!-- 放款交易处理 -->
+		<trade method="drawdowntransaction" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.transaction.DrawdownTransactionHandler</handler>
+		</trade>
+		
+	   <!--借款信息查询 -->
+		<trade method="queryloanlist">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.LoanListHandler</handler>
+		</trade>
+		
+		 <!--借款统计 -->
+		<trade method="queryloaninfosum">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.LoanInfoSumHandler</handler>
+		</trade>
+		 
+
+	 <!--借款明细查询 -->
+		<trade method="queryloaninfo">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.LoanInfoHandler</handler>
+		</trade>
+		
+		 <!--借款明细查询按期次 -->
+		<trade method="queryseqidloaninfo">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.LoanInfoSeqIdHandler</handler>
+		</trade>
+		
+		
+		<!-- 登录 -->
+		<trade method="logon" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.LogonHandler</handler>
+			<!-- 以下为模拟登录交易，不与用户中心交互 -->
+			<!-- <handler>com.amarsoft.p2ptrade.account.DummyLogonHandler</handler> -->
+		</trade>
+		
+		<!-- 注册 -->
+		<trade method="register">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.RegisterHandler</handler>
+		</trade>
+		
+		<!-- 校验用户名/手机/邮箱唯一性 -->
+		<trade method="accountvalid">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.UserAccountValid</handler>
+		</trade>
+		
+		<!-- 单点登录发起 -->
+		<trade method="singlesignon">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.SingleSignOnHandler</handler>
+		</trade>
+		
+		<!-- 通知Session销毁结果 -->
+		<trade method="clearsession">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.ClearSessionHandler</handler>
+		</trade>
+		
+		<!-- 检查Session -->
+		<trade method="checksession">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.CheckSessionHandler</handler>
+		</trade>
+		
+		<!-- 修改用户信息 -->
+		<trade method="modifyuseraccount" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.ModifyUserAccountHandler</handler>
+		</trade>
+			<!-- 修改紧急联系人信息 -->
+		<trade method="modifyemergency" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.ModifyEmergencyHandler</handler>
+		</trade>
+				<!-- 修改安全问题 -->
+		<trade method="modifyquestion" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.ModifyQuestionHandler</handler>
+		</trade>
+				<!-- 绑定手机 -->
+		<trade method="modifyphone" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.ModifyPhoneHandler</handler>
+		</trade>
+		
+		<!-- 发送邮件 -->
+		<trade method="modifymail" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.ModifyMailHandler</handler>
+		</trade>
+			<!-- 发送邮件成功，返回认证-->
+		<trade method="successmail" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.SuccessMailHandler</handler>
+		</trade>
+		
+		<!-- 保存用户详细信息 -->
+		<trade method="saveuseracctdetail" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.SaveUserAccountDetailHandler</handler>
+		</trade>
+		
+		<!-- 查询用户详细信息 -->
+		<trade method="queryuseracctinfo">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.QueryUserAccountInfoHandler</handler>
+		</trade>
+		
+		<!-- 查询用户余额信息 -->
+		<trade method="queryuserbalance">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.QueryUserBalanceHandler</handler>
+		</trade>
+		
+		<!-- 找回密码查询用户基本信息 -->
+		<trade method="finduserinfo">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.UserAccountInfoHandler</handler>
+		</trade>
+		
+		<!-- 找回密码查询用户基本信息:通过手机号获取会员信息 -->
+		<trade method="finduserinfo.mobile">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.UserAccountInfoByMobileHandler</handler>
+		</trade>
+		
+		<!-- 用户中心-推荐客户-推荐客户-->
+		<trade method="recommendapplicationlist">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.RecommendApplicationListHandler</handler>
+		</trade>
+		
+		<!-- 获得下一个项目上架时间 -->
+		<trade method="invest.nextproject.time">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.project.NextProjectTimeHandler</handler>
+		</trade>
+		
+		<!-- 投资前余额检查等 -->
+		<trade method="invest.check.beforestart">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.project.InvestUserCheckHandler</handler>
+		</trade>
+		
+		<!-- 确认官网手机变更 -->
+		<trade method="confirmmobilechange">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.ConfirmMobileChangeHandler</handler>
+		</trade>
+		
+		<!-- 确认官网密码找回 -->
+		<trade method="confirmpasswordretrieve">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.ConfirmPasswordRetrieveHandler</handler>
+		</trade>
+		
+		<!-- 设置安全问题-->
+		<trade method="setsecurityquestion">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.SetSecurityQuestionHandler</handler>
+		</trade>
+		
+		<!-- 验证安全问题 -->
+		<trade method="validsecurityquestion">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.ValidSecurityQuestionHandler</handler>
+		</trade>
+		
+		<!-- 贷款需求发布 by cyliu at 2014.8.25-->
+		<trade method="releaseapplication">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.ReleaseLoanRequireHandler</handler>
+		</trade>
+		
+		<!-- 风险评估测试 by cyliu at 2014.8.27-->
+		<trade method="riskreviews">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.RiskReviewsHandler</handler>
+		</trade>
+		
+		<!-- 风险评估测试结果 by cyliu at 2014.8.28-->
+		<trade method="riskrevresult">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.RiskRevResultHandler</handler>
+		</trade>
+		
+		<!-- 获取手机验证码-->
+		<trade method="getmobilemsg">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.MobileMsgHandler</handler>
+		</trade>
+		
+		<!-- 保存信息-->
+		<trade method="saveRegister">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.SaveRegisterHandler</handler>
+		</trade>
+		
+		<!-- 整合的Handler，将一个页面中调用的多个Handler合并在这一个Handler中执行 by cyliu at 2014.8.25-->
+		<trade method="integratequery">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.IntegrateHandler</handler>
+		</trade>
+		
+		<!-- 充值界面查询 -->
+		<trade method="chargetrade">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.ChargeTradeHandler</handler>
+		</trade>
+
+		<!-- 余额查询 -->
+		<trade method="queryuseraccountbalance">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.AccountBalanceHandler</handler>
+		</trade>
+
+
+		<!-- 交易明细查询 -->
+		<trade method="queryusertranslist">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.TransListHandler</handler>
+		</trade>
+		
+				<!-- 城市 -->
+		<trade method="citylist">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.areacode.CityHandler</handler>
+		</trade>
+		
+			<!-- 地区 -->
+		<trade method="regionlist">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.areacode.RegionHandler</handler>
+		</trade>
+
+
+		<!-- 查询绑定银行卡交易 -->
+		<trade method="querybindingbankcard">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.BindingBankCardStatusHandler</handler>
+		</trade>
+
+		 <!-- 充值提现获取用户信息-->
+		<trade method="useraccountinfo">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.UserInfoHandler</handler>
+		</trade>
+
+		<!-- 发起充值交易 -->
+		<trade method="chargeapply" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+		 <handler>com.amarsoft.p2ptrade.personcenter.ChargeApplyHandler</handler>
+		 <!-- 下面为充值并生成合同 -->
+		 <!--<handler>com.amarsoft.p2ptrade.personcenter.ChargeApplyHaveContractHandler</handler>-->
+		 <!-- 下面为调Trade生成合同 -->
+<!-- 		 <handler>com.amarsoft.p2ptrade.personcenter.ChargeApplyHaveTradeContractHandler</handler> -->
+		 <!-- 下面为多线程充值 -->
+		<!--<handler>com.amarsoft.p2ptrade.personcenter.RealChargeApplyHandler</handler> -->
+		</trade>
+		
+		<!-- 快捷支付交易处理 -->
+		<trade method="oncechargeapply" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+		 <handler>com.amarsoft.p2ptrade.personcenter.OnceChargeApplyHandler</handler>
+		 <!-- 下面为充值并生成合同 -->
+		 <!--<handler>com.amarsoft.p2ptrade.personcenter.ChargeApplyHaveContractHandler</handler>-->
+		 <!-- 下面为调Trade生成合同 -->
+<!-- 		 <handler>com.amarsoft.p2ptrade.personcenter.ChargeApplyHaveTradeContractHandler</handler> -->
+		 <!-- 下面为多线程充值 -->
+		<!--<handler>com.amarsoft.p2ptrade.personcenter.RealChargeApplyHandler</handler> -->
+		</trade>
+		
+		<!-- 快捷支付交易推进 -->
+		<trade method="oncechargeapplyverified" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+		 <handler>com.amarsoft.p2ptrade.personcenter.OnceChargeVerifiedHandler</handler>
+		 <!-- 下面为充值并生成合同 -->
+		 <!--<handler>com.amarsoft.p2ptrade.personcenter.ChargeApplyHaveContractHandler</handler>-->
+		 <!-- 下面为调Trade生成合同 -->
+<!-- 		 <handler>com.amarsoft.p2ptrade.personcenter.ChargeApplyHaveTradeContractHandler</handler> -->
+		 <!-- 下面为多线程充值 -->
+		<!--<handler>com.amarsoft.p2ptrade.personcenter.RealChargeApplyHandler</handler> -->
+		</trade>
+		
+		<!-- 校验当日限额 -->
+		<trade method="checkchargeamountbydate">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.CheckChargeAmountbyDateHandler</handler>
+		</trade>
+		
+		<!-- 充值历史记录查询交易 -->
+		<trade method="querychargehistory">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.ChargeHistoryListHandler</handler>
+		</trade>
+		
+		<!-- 交易历史记录查询 -->
+		<trade method="queryhistory">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.HistoryListHandler</handler>
+		</trade>
+		
+		<!-- 交易历史记录数量 -->
+		<trade method="queryhistory.count">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.HistoryListCountHandler</handler>
+		</trade>
+		
+		<!-- 交易详情查询 -->
+		<trade method="recordinfo">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.RecordInfoHandler</handler>
+		</trade>
+		<!-- 获取提现限额 -->
+		<trade method="getbankwithdrawmaxlimit">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.GetBankWithDrawMaxLimitHandler</handler>
+		</trade>
+		
+		<!-- 校验用户每日提现次数 -->
+		<trade method="checkbankwithdrawmaxtimelimit">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.CheckBankWithDrawMaxTimeLimitHandler</handler>
+		</trade>
+		
+		<!-- 发起提现交易 -->
+		<trade method="withdrawapply" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.WithdrawApplyHandler</handler>
+		</trade>
+		<!-- 异步校验指定银行提款上限 -->
+		<trade method="withdrawapplyajax" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.WithdrawApplyAjaxHandler</handler>
+		</trade>
+
+		<!-- 提现历史记录查询交易 -->
+		<trade method="querywithdrawhistory">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.WithdrawHistoryListHandler</handler>
+		</trade>
+		
+		<!-- 短信验证码发送交易 -->
+		<trade method="sendsms">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.tools.SendSMSHandler</handler>
+		</trade>
+		
+		<!-- 短信验证码发送交易 -->
+		<trade method="sendotpmessage">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.tools.SendOTPMessageHandler</handler>
+		</trade>
+		
+		<!-- 校验短信验证码交易 -->
+		<trade method="checkotpmessage">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.tools.CheckOTPMessageHandler</handler>
+		</trade>
+		
+		<!-- 银行提现限额查询 -->
+		<trade method="querybankwithdrawlimit">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.BankWithdrawLimitHandler</handler>
+		</trade>
+		
+		<!-- 银行提现限额设置 -->
+		<trade method="setregwithdrawlimit">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.SetRegBankCardWithdrawLimitHandler</handler>
+		</trade>
+		
+		<!-- 手续费计算 -->
+		<trade method="calctransfee">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.CalcTransFeeHandler</handler>
+		</trade>
+		
+		<!-- 绑定银行卡前校验 -->
+		<trade method="checkbeforebindbank">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.CheckBeforeBindBankHandler</handler>
+		</trade> 
+		
+		<!-- 用户真实信息查询 -->
+		<trade method="accountdetail">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.AccountRealDetailHandler</handler>
+		</trade>
+		
+		<!-- 校验：交易密码 -->
+		<trade method="checktranspassword">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.tools.CheckTransPasswordHandler</handler>
+		</trade>
+		
+		<!-- 获取交易密码错误次数 -->
+		<trade method="gettranspasserrorcount">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.GetTransPassErrorCountHandler</handler>
+		</trade>
+		
+		<!-- 清除交易密码错误记录 -->
+		<trade method="cleartranspasserrorcount">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.ClearTransPassErrorCountHandler</handler>
+		</trade>
+		
+		<!-- 绑卡验证费单日代付查询 -->
+		<trade method="querybindingcardtranscount">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.CheckUserBindingCardTransCountHandler</handler>
+		</trade>
+		
+		<!-- 绑卡验证费单张卡片代付查询（次数和此卡是否已被绑定） -->
+		<trade method="querybindingcardalltranscount">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.CheckCardBindingCardTransCountHandler</handler>
+		</trade>
+		
+		
+		<!-- 绑卡打钱前校验，判断该卡是否已经打过钱且未校验过 -->
+		<trade method="checkneedbindbank">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.CheckNeedBindBankHandler</handler>
+		</trade>		
+		
+		
+		<!-- 发起绑卡 -->
+		<trade method="bindingcardapply" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.BindingCardApplyHandler</handler>
+		</trade>
+		<!-- 发起绑卡推进 -->
+		<trade method="bindingcardcode" needLog="true">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.BindingCardCodeHandler</handler>
+		</trade>
+		
+		<!-- 获取codelibrary -->
+		<trade method="getcodelibrary">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.getCodeLibraryHandler</handler>
+		</trade>			
+		
+		<!-- 绑卡打款验证 -->
+		<trade method="checkbindbankamount">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.CheckBindBankAmountHandler</handler>
+		</trade>
+		
+		<!-- 更换绑定银行卡前校验 -->
+		<trade method="checkbeforeexchangebindbank">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.CheckBeforeExchangeBindBankHandler</handler>
+		</trade> 
+		
+		<!-- 获取现有银行卡信息 -->
+		<trade method="getexitingaccountinfo">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.GetExitingAccountInfoHandler</handler>
+		</trade> 
+		
+		<!-- 获取银行卡已校验错误次数 -->
+		<trade method="getaccountchecknumber">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.GetAccountCheckNumberHandler</handler>
+		</trade> 
+		
+		<!-- 获取用户身份信息绑定情况 -->
+		<trade method="getuseraccountdetailinfo">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.GetUserAccountAuthInfoHandler</handler>
+		</trade>
+		
+		<!-- 个人中心首页获取相关信息 -->
+		<trade method="getpersoncenterglobal">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.GetPersonCenterGlobalHandler</handler>
+		</trade>
+		
+		<!-- 大陆用户实名认证 -->
+		<trade method="setcontuserrealname" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.SetContUserRealNameHandler</handler>
+		</trade> 
+		
+		<!-- 港澳台用户实名认证第一步 -->
+		<trade method="sethmtuserrealnameone">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.SetHMTUserRealNameStepOneHandler</handler>
+		</trade> 
+		
+		<!-- 港澳台用户实名认证第二步 -->
+		<trade method="sethmtuserrealnametwo">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.SetHMTUserRealNameStepTwoHandler</handler>
+		</trade> 
+		
+		<!-- 港澳台用户实名认证第三步 -->
+		<trade method="sethmtuserrealnamethree">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.SetHMTUserRealNameStepThreeHandler</handler>
+		</trade> 
+					<!-- 投资管理-我的投资 -->
+		<trade method="queryinvestmentlist">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.InvestmentListHandler</handler>
+		</trade>
+		
+		      <!-- 投资管理-我的投资明细 -->
+		<trade method="queryinvestmentinfo">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.InvestmentInfoHandler</handler>
+		</trade>
+		
+		    <!-- 投资管理-待收款-->
+		<trade method="paymentschedulereceive">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.PaymentScheduleReceiveHandler</handler>
+		</trade>
+		  <!-- 投资管理-待收款明细-->
+		<trade method="paymentschedulereceivelist">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.PaymentScheduleReceiveListHandler</handler>
+		</trade>
+		
+		    <!-- 投资管理-已收款-->
+		<trade method="paymentscheduletreat">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.PaymentScheduleTreatHandler</handler>
+		</trade>
+		    <!-- 投资管理-已收款明细-->
+		<trade method="paymentscheduletreatlist">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.PaymentScheduleTreatListHandler</handler>
+		</trade>
+		
+		<!-- 投资篮 -->
+		<trade method="getinvestbasket">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.GetInvestBasketHandler</handler>
+		</trade>
+		
+			<!-- 收款-全部代收本息-->
+		<trade method="paymentschedulereceiveinfo">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.PaymentScheduleReceiveInfoHandler</handler>
+		</trade>
+		
+		    <!-- 借款管理-我的借款-还款试算金额-->
+		<trade method="querypaymentinfo">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.transaction.PaymentInfoConsultHandler</handler>
+		</trade>
+		
+		    <!-- 借款管理-我的借款-发起还款-->
+		<trade method="paymentapply" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.transaction.PaymentHandler</handler>
+		</trade>
+		
+		    <!-- 借款管理-我的借款-还款金额-->
+		<trade method="querypaymentinfo">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.PaymentInfoHandler</handler>
+		</trade>
+		
+		  <!-- 投资管理－投资统计-->
+		<trade method="queryinvestmentstat">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.InvestmentStatHandler</handler>
+		</trade>
+		
+	     <!-- 投资管理-我的投资期次 -->
+		<trade method="queryinvestmentinfoseqid">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.InvestmentInfoSeqIdHandler</handler>
+		</trade>
+		
+		<!-- 我要借款-留言借款 -留言提交-->
+		<trade method="saveusernote">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.LoanUserNoteHandler</handler>
+		</trade>
+		
+		<!-- 我要借款-快速借款申请视图-->
+		<trade method="saveuseronline">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.LoanUserOnlineHandler</handler>
+		</trade>
+		
+		<!-- 我要借款-预签合同 -生成预签合同-->
+		<trade method="generateprecontract">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.GeneratePreContractHandler</handler>
+		</trade>
+		
+		<!-- 我要借款-预签合同 -确认合同-->
+		<trade method="confirmprecontract">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.ConfirmPreContractHandler</handler>
+		</trade>
+		
+		<!-- 帮助中心-客户提问-->
+		<trade method="helpusernote">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.help.HelpUserNoteHandler</handler>
+		</trade>
+		
+		<!-- 图片DEMO -->
+		<trade method="demoimage">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.demo.DemoImageHandler</handler>
+		</trade>
+		
+		<!-- 广告图片服务 -->
+		<trade method="advertisementimage">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.console.AdvertisementImageHandler</handler>
+		</trade>
+		
+		<!-- 查询广告与公告信息 -->
+		<trade method="queryboard">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.console.QueryBoardHandler</handler>
+		</trade> 
+		
+			<!-- 签署借款合同认证 -->
+		<trade method="queryapplicationauth">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.QueryApplicationAuthHandler</handler>
+		</trade> 
+		
+		
+		<!-- 校验用户名手机号是否匹配 -->
+		<trade method="validusermobile">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.ValidUserMobileHandler</handler>
+		</trade> 
+		
+		<!-- 密码找回 -->
+		<trade method="passwordretrieve">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.PasswordRetrieveHandler</handler>
+		</trade>
+		
+		<!-- 发送认证邮件 -->
+		<trade method="mailauthentication">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.MailAuthenticationHandler</handler>
+		</trade>
+		
+		<!-- 网关充值交易发起 -->
+		<trade method="gatewaychargeapply">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.GatewayChargeApplyHandler</handler>
+		</trade>
+		
+		<!-- 网关充值交易记账 -->
+		<trade method="rungatewaycharge">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.GatewayChargeTransactionHandler</handler>
+		</trade>
+		
+		<!-- 机构提现申请 -->
+		<trade method="orgwithdrawapply">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.console.OrgWithdrawApplyHandler</handler>
+		</trade>
+		
+		<!-- 帮助列表 -->
+		<trade method="help.list">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.help.HelpListHandler</handler>
+		</trade>
+		
+		<!-- 帮助详情 -->
+		<trade method="help.info">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.help.HelpInfoHandler</handler>
+		</trade>
+		<!-- 帮助最热搜索 -->
+		<trade method="help.topSearch">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.help.HelpTopSearchHandler</handler>
+		</trade>
+		
+		<!-- 合同-借款及担保（针对借款人） -->
+		<trade method="contract.borrower">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.contract.ContractBorrowerHandler</handler>
+		</trade>
+		
+		<!-- 合同-借款及担保（针对投资人） -->
+		<trade method="contract.investor">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.contract.ContractInvestorHandler</handler>
+		</trade>
+		
+		<!-- 合同-催收-->
+		<trade method="contract.collection">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.contract.ContractCollectionHandler</handler>
+		</trade>
+		
+		<!-- 合同-代扣-->
+		<trade method="contract.withhold">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.contract.ContractWithholdHandler</handler>
+		</trade>
+		<!-- 合同－充值 -->
+		<trade method="contract.recharge">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.contract.ContractRechargeHandler</handler>
+		</trade>
+		
+		<!-- 预签合同 -->
+		<trade method="signprecontract">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.SignPreContractHandler</handler>
+		</trade>
+		
+		<!-- 忘记密码－是否绑卡 -->
+		<trade method="forgetpassword.bindedbank">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.forgetpassword.FetchBindBankInfoHandler</handler>
+		</trade>
+		
+		<!-- 身份证唯一性校验 -->
+		<trade method="valid.certid.unique">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.webservice.valids.UniqueCertIDHandler</handler>
+		</trade>
+		
+		<!-- 身份信息补充 -->
+		<trade method="account.userinfo.check">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.UserInfoSupplement</handler>
+		</trade>
+		
+		<!-- 检查账户是否冻结 -->
+		<trade method="checkuseraccountfreeze">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.CheckUserAccountFreezeHandler</handler>
+		</trade>
+		
+		<!-- 官网信息变更后需要发起安全问题 -->
+		<trade method="usercenter.change.question.get">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.usercenterchange.QuestionGetterHandler</handler>
+		</trade>
+		<trade method="usercenter.change.question.check">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.usercenterchange.QuestionCheckerHandler</handler>
+		</trade>
+		
+		
+		<trade method="account.question.check">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.QuestionCheckerHandler</handler>
+		</trade>
+		
+		<trade method="account.transpwd.modify">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.ModifyTransPwdHandler</handler>
+		</trade>
+		
+		<trade method="account.query.certid">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.QueryUserCertIDrHandler</handler>
+		</trade>
+		
+		<trade method="checkpassnoexist">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.CheckPassNoExistHandler</handler>
+		</trade>
+		
+		<trade method="checkcertnoexist">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.CheckCertNoExistHandler</handler>
+		</trade>
+		
+		<trade method="loadcontractpdf">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.awe.common.pdf.LoadContractPdfHandler</handler>
+		</trade>
+		
+		<trade method="getitemnamehandler">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.tools.GetItemNameHandler</handler>
+		</trade>
+		
+		<!-- 易贷中国首页 -->
+		<!-- 贷款招标列表 -->
+		<trade method="loanchinainvest">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loanchina.InvestTenderListHandler</handler>
+		</trade>
+	
+		<!-- p2p  -->
+		<!-- 新闻列表 -->
+		<trade method="newslist">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.NewsHandler</handler>
+		</trade>
+		<!-- 新闻列表和公告列表 -->
+		<trade method="newsandnoticelist">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.NewsAndNoticeListHandler</handler>
+		</trade>
+		<!-- 新闻详情 -->
+		<trade method="newsdetail">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.NewsInfoHandler</handler>
+		</trade>
+		<!-- 投资达人 -->
+		<trade method="curContract">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.CurContractHandler</handler>
+		</trade>
+		<trade method="addCount">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.AddCountHandler</handler>
+		</trade>
+		<!-- 贷款招标详情 -->
+		<trade method="loanchinainvestDetail">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loanchina.InvestTenderDetailHandler</handler>
+		</trade>
+
+		<!-- 关于我们 -->
+		<trade method="loanchinaguideDetail">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loanchina.AboutUsDetailHandler</handler>
+		</trade>
+		<!-- 关于我们、帮助中心 获取栏目 -->
+		<trade method="aboutUsMenuDetail">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loanchina.AboutUsMenuDetailHandler</handler>
+		</trade>
+
+		<!-- 广告详情 -->
+		<trade method="advertise">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.AdvertiseHandler</handler>
+		</trade>
+		
+		<!-- 注册信息校验 -->
+		<trade method="registerCheck">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.RegisterCheckHandler</handler>
+		</trade>
+		
+		<!-- 注册信息校验 -->
+		<trade method="myregisterCheck">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.MyRegisterCheckHandler</handler>
+		</trade>
+		
+		<!-- 获取个人贷款信息 -->
+		<trade method="getApplyInfoList">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.GetApplyInfoListHandler</handler>
+		</trade>
+		<!-- 获取个人申请贷款信息页面 -->
+		<trade method="getApplyInfo">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.GetLoanApplyInfoHandler</handler>
+		</trade>
+		
+		<trade method="picview">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.PicViewHandler</handler>
+		</trade>
+
+		<!-- 新增贷款申请 -->
+	    <trade method="addloan" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.LoanAddHandler</handler>
+		</trade>
+		<!-- 新增留言式贷款申请 -->
+	    <trade method="addloannote" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.LoanNoteAddHandler</handler>
+		</trade>
+		<!-- 最新投资产品 -->
+		<trade method="investpro">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.InvestProHandler</handler>
+		</trade>
+		<!-- 推荐的投资项目 -->
+		<trade method="toprecordpro">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.TopRecordProHandler</handler>
+		</trade>
+		<!-- 最新投资列表 -->
+		<trade method="newinvest">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.invest.InvestListHandler</handler>
+		</trade>
+		<!--  获得我的贷款p2p的信息详情  by mbmo-->
+		<trade method="getMyApplyInfoDetail">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.MyLoanDetailHandler</handler>
+		</trade>
+		<!--  获得我的贷款p2p筹款中的信息详情  by mbmo-->
+		<trade method="MyRaisingInfoDetail">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.MyRaisingInfoDetailHandler</handler>
+		</trade>
+		<!--  获得我的贷款p2p等待审核中的信息详情  by mbmo-->
+		<trade method="MyPendingInfoDetail">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.MyPendingInfoDetailHandler</handler>
+		</trade>
+		<!--  获取个人验证信息  by mbmo 2014.9.15-->
+		<trade method="getSingleConfirmInfo">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.GetSingleConfirmInfoHandler</handler>
+		</trade>
+		<!-- 最新投资详情 -->
+		<trade method="newinvestdetail">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.invest.InvestDetailHandler</handler>
+		</trade>
+		<!-- 投资确认详情 -->
+		<trade method="investAffirmInfo">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.invest.InvestAffirmInfoHandler</handler>
+		</trade>
+		<!-- 投资合同确认详情 -->
+		<trade method="investContract">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.invest.InvestContractHandler</handler>
+		</trade>
+		<!-- 投资短信校验详情 -->
+		<trade method="investPhone">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.invest.InvestPhoneHandler</handler>
+		</trade>
+		<!-- 投资成功详情 -->
+		<trade method="investSuccess">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.invest.InvestSuccessHandler</handler>
+		</trade>
+		<!-- 投资交易 -->
+		<trade method="investTrans" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.invest.InvestTransactionHandler</handler>
+		</trade>
+		<trade method="investTrans.quee" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.invest.InvestTransactionWithQueeHandler</handler>
+		</trade>
+		<trade method="investTrans.quee.status" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.invest.InvestTransactionStatusWithQueeHandler</handler>
+		</trade>
+		
+		<!-- 用户基本信息认证 -->
+		<trade method="userConfirm" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.UserConfirmHandler</handler>
+		</trade>
+		<!-- 用户家庭信息认证 -->
+		<trade method="familyConfirm" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.FamilyConfirmHandler</handler>
+		</trade>
+		<!-- 用户工作信息认证 -->
+		<trade method="workConfirm" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.WorkConfirmHandler</handler>
+		</trade>
+		<!-- 用户个人资产信息认证 -->
+		<trade method="singleConfirm" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.SingleConfirmHandler</handler>
+		</trade>
+		<!-- 用户企业资产信息认证 -->
+		<trade method="businessConfirm" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.BusinessConfirmHandler</handler>
+		</trade>
+		<!-- 检查用户交易密码是否设置 -->
+		<trade method="account.tradepwd.check" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.CheckTradePwdHandler</handler>
+		</trade>
+		<!-- 修改登录密码 -->
+		<trade method="modifypassword" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.ModifyPasswordHandler</handler>
+		</trade>
+		<!-- 找回登录密码 -->
+		<trade method="findpassword" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.FindPasswordHandler</handler>
+		</trade>
+		<!-- 查询交易密码 -->
+		<trade method="checkTranspwd">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.CheckTranspwdHandler</handler>
+		</trade>
+		<!-- 修改交易密码 -->
+		<trade method="modifytranspwd" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.ModifyTranspwdHandler</handler>
+		</trade>
+		<!-- 设置交易密码 -->
+		<trade method="savetranspwd" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.SaveTranspwdHandler</handler>
+		</trade>
+		<!-- 找回交易密码验证 -->
+		<trade method="checktranspwd.userid" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.CheckTranspwdWithUserInfoHandler</handler>
+		</trade>
+		<!-- 找回交易密码验证 -->
+		<trade method="checktranspwd.userid.codenum" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.CheckTranspwdWithUserInfoAndCodeHandler</handler>
+		</trade>
+		<!-- 设置交易密码并清除出错记录 -->
+		<trade method="savetranspwd_clear" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.SaveTranspwdAndClearHandler</handler>
+		</trade>
+		
+		
+		<!-- 删除银行卡 -->
+		<trade method="deletebankcard" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.DeleteBankcardHandler</handler>
+		</trade>
+		<!-- 检查还款银行卡 -->
+		<trade method="checkbankcard">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.CheckBankcardHandler</handler>
+		</trade>
+		<!-- PDF合同信息 -->
+		<trade method="contractpdfinfo">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.GetContractPDFInfoHandler</handler>
+		</trade>
+		<!-- 代偿合同信息 -->
+		<trade method="dccontractpdf">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.ContractPDFHandler</handler>
+		</trade>
+			<!-- 投资合同 -->
+		<trade method="investcontractpdf">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.InvestContractPDFHandler</handler>
+		</trade>
+			<!-- SEO -->
+		<trade method="seo">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.SEOHandler</handler>
+		</trade>
+		
+				
+		<!-- 计算贷款还款方式-->
+		<trade method="calcPaymentSchedule">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.loan.CalcPaymentSchedule</handler>
+		</trade>
+		<!-- 修改用户名-->
+		<trade method="saveusername" needLog="true">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.SaveUserNameHandler</handler>
+		</trade>
+		<!-- 签到记录-->
+		<trade method="usersignlist">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.UserSignListHandler</handler>
+		</trade>
+		<!-- 签到统计-->
+		<trade method="usersigncount">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.UserSignCountHandler</handler>
+		</trade>
+		<!-- 添加签到记录-->
+		<trade method="addusersign">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.AddUserSignHandler</handler>
+		</trade>
+		<!-- 添加一周免签-->
+		<trade method="addweekusersign">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.account.AddWeekUserSignHandler</handler>
+		</trade>
+		<!-- 会员中心首页-->
+		<trade method="memberindex">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.MemberIndexHandler</handler>
+		</trade>
+		<!-- 会员邀请统计-->
+		<trade method="userinvite">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.UserInviteHandler</handler>
+		</trade>
+		<!-- 收益统计-->
+		<trade method="userincome">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.UserIncomeHandler</handler>
+		</trade>
+		<!-- app会员上传图片-->
+		<trade method="addphoto">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.PhotoSaveHandler</handler>
+		</trade>
+		<!-- app会员通讯录添加-->
+		<trade method="useraddress">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.UserAddressHandler</handler>
+		</trade>
+		
+		<!-- 预签合同状态查询 -->
+		<trade method="precontract.status">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.precontract.PreContractStatusHandler</handler>
+		</trade>
+		<!-- 预签合同提交 -->
+		<trade method="precontract.submit">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.precontract.PreContractSubmitHandler</handler>
+		</trade>
+		<!--查询首页项目选择过滤列表 -->
+		<trade method="content_management.listget">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.GetContentManagementListHandler</handler>
+		</trade>
+		
+		<!--查询首页项目选择过滤列表-是否可以投资 -->
+		<trade method="content_management.countget">
+			<convertors>
+				<convertor type="json" className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.front.GetContentManagementCountHandler</handler>
+		</trade>
+		
+		<!--收益明细列表 -->
+		<trade method="invest.income.list">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.personcenter.UserIncomeDetailHandler</handler>
+		</trade>
+		<!-- 查看流文件 -->
+		<trade method="system.bytes.view">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.util.BytesViewHandler</handler>
+		</trade>
+		<!-- APP管理 -->
+		<!-- APP广告位管理 -->
+		<trade method="app.ads">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.mobileapp.APPBannerAdHandler</handler>
+		</trade>
+		<!--APP版本更新管理 -->
+		<trade method="app.version">
+			<convertors>
+				<convertor type="json"
+					className="com.amarsoft.mobile.webservice.imp.DefaultJSONDataConvertor" />
+			</convertors>
+			<handler>com.amarsoft.p2ptrade.mobileapp.APPEditionHandler</handler>
+		</trade>
+	</trades>
+</Config>

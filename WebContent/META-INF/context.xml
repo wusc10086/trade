@@ -1,0 +1,6 @@
+<Context path="" docBase="" debug="5" reloadable="true" crossContext="true">
+	<Resource name="jdbc/als" auth="Container" type="javax.sql.DataSource" 
+	   maxActive="200" maxIdle="200" maxWait="10000" 
+	   username="hb" password="hb" driverClassName="com.mysql.jdbc.Driver" 
+	   url="jdbc:mysql://192.168.1.245:3306/hb?characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false" />
+</Context>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="GB2312"?>
+<config>
+	<!-- 
+	 -->
+	<messages>
+		<message id="新浪_创建激活用户" name="新浪_创建激活用户" connection="SINAPAY_CONNECTION">
+			<extendProperties>	
+				 <property name="transCode" value="create_activate_member" />			
+			</extendProperties>
+			 <request executeObject="新浪_创建激活用户_请求报文" 
+			 		  messageclass="com.amarsoft.message.common.message.XmlMessage" 
+					  fieldclass="com.amarsoft.message.common.message.XmlField"   
+			 ></request>
+			 <response 
+			 		executeObject="公共反馈报文"
+			 		messageclass="com.amarsoft.message.common.message.JSONMessage" 
+					fieldclass="com.amarsoft.message.common.message.JSONField" 
+			 		></response>
+		</message>	
+	</messages>
+	
+	<executeObjects>
+			<executeObject
+				name="新浪_创建激活用户_请求报文"
+				describe="新浪_创建激活用户_请求报文" 
+				elementName="sinapay"
+				mulRows="false">
+				 <extendProperties>
+				</extendProperties>
+				<field name="service" elementName="service" describe="接口名称" type="String" size="20" valuesource="messageProperty" value="${transCode}" required="true"/>
+				<field name="version" elementName="version" describe="接口版本" type="String" size="20" valuesource="DEFAULT" value="1.0" required="true"/>
+				<field name="request_time" elementName="request_time" describe="请求时间" type="String" size="20" valuesource="EXPRESSION" value="Helper.getToday('')+Helper.getNow('')" required="true"/>
+				<field name="partner_id" elementName="partner_id" describe="合作者身份ID" type="String" size="20" valuesource="messageProperty" value="${Templet.partner_id}" required="true"/>
+				<field name="_input_charset" elementName="_input_charset" describe="商户网站使用的编码格式" type="String" size="20" valuesource="messageProperty" value="${Templet.input_charset}" required="true"/>
+				<!-- <field name="sign_type" elementName="sign_type" describe="签名方式" type="String" size="20" valuesource="DEFAULT" value="${Templet.sign_type}" required="true"/>
+				 -->
+				<!-- 参数 -->
+				<field name="identity_id" elementName="identity_id" describe="用户标识信息" type="String" size="20" valuesource="IN" value="USERID" required="true"/>
+				<field name="identity_type" elementName="identity_type" describe="用户标识类型" type="String" size="20" valuesource="DEFAULT" value="UID" required="true"/>
+				<!-- <field name="member_type" elementName="member_type" describe="会员类型" type="String" size="20" valuesource="FUNCTION" value="
+						if(1==1)
+						{
+							return '1';
+						}
+						else /**企业客户。默认为个人*/
+						{
+							return '2';
+						}
+				" required="true"/> -->
+				<!-- <field name="extend_param" elementName="extend_param" describe="扩展信息" type="String" size="20" valuesource="DEFAULT" value="" />
+				 -->
+			</executeObject>
+				
+	</executeObjects>
+</config>

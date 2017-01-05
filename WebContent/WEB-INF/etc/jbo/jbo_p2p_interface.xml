@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 太平电商P2P平台报表所需要使用到的表 -->
+<jbo>
+    <package name="jbo.p2p.interface">
+    	 <class name="Transation_Log" label="交易日志信息表" >
+            <attributes>
+                <attribute name="LogID" label="LogID" type="STRING" length="40"/>
+                <attribute name="TRANSSERIALNO" label="TRANSSERIALNO" type="STRING" length="40"/>
+				<attribute name="TransCode" label="TransCode" type="STRING" length="40"/>
+				<attribute name="TRANSCHANNEL" label="TRANSCHANNEL" type="STRING" length="40"/>
+				<attribute name="TRANSDATE" label="TRANSDATE" type="STRING" length="10"/>
+				<attribute name="TRANSTIME" label="TRANSTIME" type="STRING" length="10"/>
+				<attribute name="TransDate" label="TransDate" type="STRING" length="10"/>
+				<attribute name="Request" label="Request" type="STRING" length="10"/>
+				<attribute name="Response" label="Response" type="STRING" length="4000"/>
+				<attribute name="Status" label="Status" type="STRING" length="10"/>
+				<attribute name="FileLocation" label="FileLocation" type="STRING" length="400"/>
+				<attribute name="filePWD" label="filePWD" type="STRING" length="400"/>
+            </attributes>
+            <manager>
+                <managerProperties>
+                    <property name="table" value="TI_TRANSACTION_LOG"/>
+                </managerProperties>
+            </manager>
+        </class>
+        
+        
+        <class name="AllinpaySeq" label="通联支付交易流水号" >
+            <attributes>
+                <attribute label="LogId" name="LogID" type="STRING" length="32"/>
+            </attributes>
+            <manager>
+                <managerProperties>
+                    <property name="table" value="dual"/>
+                    <property name="attributeMap" value="{LogId,[lpad(SEQ_Allinpay.NEXTVAL,'20','0')]}"/>
+                </managerProperties>
+            </manager>
+        </class>
+        
+    </package>
+    
+    <package name="jbo.p2p.interface.sms">
+    	 <!-- JBO参数测试 -->
+         <class name="test" label="通联支付交易流水号" >
+            <attributes>
+                <attribute label="LogId" name="LogID" type="STRING" length="32"/>
+            </attributes>
+            <manager>
+                <managerProperties>
+                    <property name="table" value="dual"/>
+                    <property name="attributeMap" value="{LogId,[lpad(SEQ_Allinpay.NEXTVAL,'20','0')]}"/>
+                </managerProperties>
+            </manager>
+        </class>
+    	
+    </package>
+</jbo>

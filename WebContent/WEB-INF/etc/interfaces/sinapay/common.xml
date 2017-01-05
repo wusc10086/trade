@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GB2312"?>
+<config>
+	<!-- 
+	 -->
+	<executeObjects>
+			<executeObject 
+					name="公共反馈报文" 
+					describe="反馈报文" 
+					elementName="">
+				<extendProperties>
+				</extendProperties>
+			</executeObject>
+	</executeObjects>
+</config>
