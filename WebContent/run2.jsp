@@ -5,7 +5,7 @@ try{
 
 	 com.amarsoft.p2ptrade.account.LogonHandler l = new com.amarsoft.p2ptrade.account.LogonHandler();
 	 com.amarsoft.awe.util.json.JSONObject obj = new com.amarsoft.awe.util.json.JSONObject();
-	 obj.put("loginId", "loginId");
+	 obj.put("loginId", "loginId"   );
 	 obj.put("password", "password");
 	 
 	 l.createResponse(obj, null);
